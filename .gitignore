@@ -1,0 +1,12 @@
+minecraft/
+.gradle/
+build/
+out/
+*.iml
+*.ipr
+*.iws
+bin/
+.settings/
+.classpath
+.project
+*.launch
