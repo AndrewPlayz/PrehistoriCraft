@@ -1,0 +1,16 @@
+[
+{
+  "modid": "PrehistoriCraft",
+  "name": "PrehistoriCraft",
+  "description": "A minecraft mod that aims to bring time travel to minecraft!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [""],
+  "credits": "Thank you to all who made this alpha version a possibility!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": [LLibrary]
+}
+]
