@@ -15,31 +15,33 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.prehistoricraft.mod.blocks.BlockAluminium;
-import net.prehistoricraft.mod.blocks.BlockAluminiumOre;
-import net.prehistoricraft.mod.blocks.BlockChronosite;
-import net.prehistoricraft.mod.blocks.BlockChronositeOre;
-import net.prehistoricraft.mod.blocks.BlockLaptop;
-import net.prehistoricraft.mod.blocks.BlockVolcanic;
-import net.prehistoricraft.mod.entity.EntityFAcrocanthosaurus;
-import net.prehistoricraft.mod.entity.EntityFElasmotherium;
-import net.prehistoricraft.mod.entity.EntityFHyena;
-import net.prehistoricraft.mod.entity.EntityFTenontosaurus;
-import net.prehistoricraft.mod.entity.EntityFTitanoceratops;
-import net.prehistoricraft.mod.entity.EntityMAcrocanthosaurus;
-import net.prehistoricraft.mod.entity.EntityMElasmotherium;
-import net.prehistoricraft.mod.entity.EntityMHyena;
-import net.prehistoricraft.mod.entity.EntityMTenontosaurus;
-import net.prehistoricraft.mod.entity.EntityMTitanoceratops;
-import net.prehistoricraft.mod.entityhandler.EntityHandlerAcrocanthosaurus;
-import net.prehistoricraft.mod.entityhandler.EntityHandlerElasmotherium;
-import net.prehistoricraft.mod.entityhandler.EntityHandlerHyena;
-import net.prehistoricraft.mod.entityhandler.EntityHandlerTenontosaurus;
-import net.prehistoricraft.mod.entityhandler.EntityHandlerTitanoceratops;
-import net.prehistoricraft.mod.items.ItemAluminiumIngot;
-import net.prehistoricraft.mod.items.ItemChronositeDust;
-import net.prehistoricraft.mod.items.ItemTreeTinder;
-import net.prehistoricraft.mod.proxy.CommonProxy;
+import net.prehistoricraft.mod.client.FuelHandler;
+import net.prehistoricraft.mod.client.PrehistoriCraftWorldGen;
+import net.prehistoricraft.mod.server.blocks.BlockAluminium;
+import net.prehistoricraft.mod.server.blocks.BlockAluminiumOre;
+import net.prehistoricraft.mod.server.blocks.BlockChronosite;
+import net.prehistoricraft.mod.server.blocks.BlockChronositeOre;
+import net.prehistoricraft.mod.server.blocks.BlockLaptop;
+import net.prehistoricraft.mod.server.blocks.BlockVolcanic;
+import net.prehistoricraft.mod.client.entity.EntityFAcrocanthosaurus;
+import net.prehistoricraft.mod.client.entity.EntityFElasmotherium;
+import net.prehistoricraft.mod.client.entity.EntityFHyena;
+import net.prehistoricraft.mod.client.entity.EntityFTenontosaurus;
+import net.prehistoricraft.mod.client.entity.EntityFTitanoceratops;
+import net.prehistoricraft.mod.client.entity.EntityMAcrocanthosaurus;
+import net.prehistoricraft.mod.client.entity.EntityMElasmotherium;
+import net.prehistoricraft.mod.client.entity.EntityMHyena;
+import net.prehistoricraft.mod.client.entity.EntityMTenontosaurus;
+import net.prehistoricraft.mod.client.entity.EntityMTitanoceratops;
+import net.prehistoricraft.mod.client.entityhandler.EntityHandlerAcrocanthosaurus;
+import net.prehistoricraft.mod.client.entityhandler.EntityHandlerElasmotherium;
+import net.prehistoricraft.mod.client.entityhandler.EntityHandlerHyena;
+import net.prehistoricraft.mod.client.entityhandler.EntityHandlerTenontosaurus;
+import net.prehistoricraft.mod.client.entityhandler.EntityHandlerTitanoceratops;
+import net.prehistoricraft.mod.server.items.ItemAluminiumIngot;
+import net.prehistoricraft.mod.server.items.ItemChronositeDust;
+import net.prehistoricraft.mod.server.items.ItemTreeTinder;
+import net.prehistoricraft.mod.server.CommonProxy;
 
 @Mod(modid = PrehistoriCraft.modid, dependencies = "required-after:llibrary@[0.7.2,)", version = PrehistoriCraft.version)
 
@@ -79,7 +81,7 @@ public class PrehistoriCraft {
 	public static CreativeTabs prehistoricraftQuaternaryTab;
 	public static CreativeTabs prehistoricraftCretaceousTab;
 	
-	@SidedProxy(clientSide = "net.prehistoricraft.mod.proxy.ClientProxy", serverSide = "net.prehistoricraft.mod.proxy.CommonProxy")
+	@SidedProxy(clientSide = "net.prehistoricraft.mod.client.ClientProxy", serverSide = "net.prehistoricraft.mod.server.CommonProxy")
 	public static CommonProxy Proxy;
 	
 	@EventHandler

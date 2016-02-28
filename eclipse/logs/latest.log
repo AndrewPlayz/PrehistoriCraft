@@ -1,0 +1,27 @@
+[12:06:03] [main/INFO]: Setting user: Player796
+[12:06:04] [Client thread/INFO]: LWJGL Version: 2.9.1
+[12:06:10] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:PrehistoriCraft, FMLFileResourcePack:LLibrary
+[12:06:11] [Sound Library Loader/INFO]: Sound engine started
+[12:06:11] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[12:06:11] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[12:06:13] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:PrehistoriCraft, FMLFileResourcePack:LLibrary
+[12:06:13] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[12:06:14] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[12:06:15] [Sound Library Loader/INFO]: Sound engine started
+[12:06:20] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[12:06:20] [Server thread/INFO]: Generating keypair
+[12:06:20] [Server thread/INFO]: Preparing start region for level 0
+[12:06:21] [Server thread/INFO]: Changing view distance to 12, from 10
+[12:06:21] [Server thread/INFO]: Player796[local:E:e5e04261] logged in with entity id 418 at (-123.58033769013042, 67.0, 299.3578275548786)
+[12:06:21] [Server thread/INFO]: Player796 joined the game
+[12:06:23] [Server thread/INFO]: Player796 has just earned the achievement [Taking Inventory]
+[12:06:23] [Client thread/INFO]: [CHAT] Player796 has just earned the achievement [Taking Inventory]
+[12:06:28] [Client thread/INFO]: Stopping!
+[12:06:28] [Server thread/INFO]: Stopping server
+[12:06:28] [Server thread/INFO]: Saving players
+[12:06:28] [Server thread/INFO]: Saving worlds
+[12:06:28] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Overworld
+[12:06:28] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Nether
+[12:06:28] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/The End
+[12:06:29] [Client Shutdown Thread/INFO]: Stopping server
+[12:06:29] [Client Shutdown Thread/INFO]: Saving players
