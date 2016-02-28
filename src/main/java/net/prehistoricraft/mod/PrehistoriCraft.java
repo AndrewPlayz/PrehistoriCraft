@@ -16,23 +16,22 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.prehistoricraft.mod.client.FuelHandler;
-import net.prehistoricraft.mod.client.PrehistoriCraftWorldGen;
+import net.prehistoricraft.mod.client.entity.passive.EntityTenontosaurus;
+import net.prehistoricraft.mod.client.world.PrehistoriCraftWorldGen;
 import net.prehistoricraft.mod.server.blocks.BlockAluminium;
 import net.prehistoricraft.mod.server.blocks.BlockAluminiumOre;
 import net.prehistoricraft.mod.server.blocks.BlockChronosite;
 import net.prehistoricraft.mod.server.blocks.BlockChronositeOre;
 import net.prehistoricraft.mod.server.blocks.BlockLaptop;
 import net.prehistoricraft.mod.server.blocks.BlockVolcanic;
-import net.prehistoricraft.mod.client.entity.EntityFAcrocanthosaurus;
-import net.prehistoricraft.mod.client.entity.EntityFElasmotherium;
-import net.prehistoricraft.mod.client.entity.EntityFHyena;
-import net.prehistoricraft.mod.client.entity.EntityFTenontosaurus;
-import net.prehistoricraft.mod.client.entity.EntityFTitanoceratops;
-import net.prehistoricraft.mod.client.entity.EntityMAcrocanthosaurus;
-import net.prehistoricraft.mod.client.entity.EntityMElasmotherium;
-import net.prehistoricraft.mod.client.entity.EntityMHyena;
-import net.prehistoricraft.mod.client.entity.EntityMTenontosaurus;
-import net.prehistoricraft.mod.client.entity.EntityMTitanoceratops;
+import net.prehistoricraft.mod.client.entity.hostile.EntityFAcrocanthosaurus;
+import net.prehistoricraft.mod.client.entity.hostile.EntityFElasmotherium;
+import net.prehistoricraft.mod.client.entity.hostile.EntityFHyena;
+import net.prehistoricraft.mod.client.entity.neutral.EntityFTitanoceratops;
+import net.prehistoricraft.mod.client.entity.hostile.EntityMAcrocanthosaurus;
+import net.prehistoricraft.mod.client.entity.hostile.EntityMElasmotherium;
+import net.prehistoricraft.mod.client.entity.hostile.EntityMHyena;
+import net.prehistoricraft.mod.client.entity.neutral.EntityMTitanoceratops;
 import net.prehistoricraft.mod.client.entityhandler.EntityHandlerAcrocanthosaurus;
 import net.prehistoricraft.mod.client.entityhandler.EntityHandlerElasmotherium;
 import net.prehistoricraft.mod.client.entityhandler.EntityHandlerHyena;
@@ -144,8 +143,8 @@ public class PrehistoriCraft {
 		EntityHandlerTitanoceratops.registerMonsters(EntityMTitanoceratops.class, "MTitanoceratops");
 		EntityHandlerTitanoceratops.registerMonsters(EntityFTitanoceratops.class, "FTitanoceratops");
 		
-		EntityHandlerTenontosaurus.registerMonsters(EntityMTenontosaurus.class, "MTenontosaurus");
-		EntityHandlerTenontosaurus.registerMonsters(EntityFTenontosaurus.class, "FTenontosaurus");
+		EntityHandlerTenontosaurus.registerMonsters(EntityTenontosaurus.class, "MTenontosaurus");
+		EntityHandlerTenontosaurus.registerMonsters(EntityTenontosaurus.class, "FTenontosaurus");
 		
 		//PrehistoriCraft Block Models
 		blockLaptop = new BlockLaptop(Material.anvil).setBlockName("LaptopBlock").setBlockTextureName("LaptopBlock.png");

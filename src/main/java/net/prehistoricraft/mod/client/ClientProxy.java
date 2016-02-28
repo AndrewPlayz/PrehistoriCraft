@@ -6,16 +6,15 @@ import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.MinecraftForgeClient;
 import net.prehistoricraft.mod.PrehistoriCraft;
-import net.prehistoricraft.mod.client.entity.EntityFAcrocanthosaurus;
-import net.prehistoricraft.mod.client.entity.EntityFElasmotherium;
-import net.prehistoricraft.mod.client.entity.EntityFHyena;
-import net.prehistoricraft.mod.client.entity.EntityFTenontosaurus;
-import net.prehistoricraft.mod.client.entity.EntityFTitanoceratops;
-import net.prehistoricraft.mod.client.entity.EntityMAcrocanthosaurus;
-import net.prehistoricraft.mod.client.entity.EntityMElasmotherium;
-import net.prehistoricraft.mod.client.entity.EntityMHyena;
-import net.prehistoricraft.mod.client.entity.EntityMTenontosaurus;
-import net.prehistoricraft.mod.client.entity.EntityMTitanoceratops;
+import net.prehistoricraft.mod.client.entity.hostile.EntityFAcrocanthosaurus;
+import net.prehistoricraft.mod.client.entity.hostile.EntityFElasmotherium;
+import net.prehistoricraft.mod.client.entity.hostile.EntityFHyena;
+import net.prehistoricraft.mod.client.entity.neutral.EntityFTitanoceratops;
+import net.prehistoricraft.mod.client.entity.hostile.EntityMAcrocanthosaurus;
+import net.prehistoricraft.mod.client.entity.hostile.EntityMElasmotherium;
+import net.prehistoricraft.mod.client.entity.hostile.EntityMHyena;
+import net.prehistoricraft.mod.client.entity.neutral.EntityMTitanoceratops;
+import net.prehistoricraft.mod.client.entity.passive.EntityTenontosaurus;
 import net.prehistoricraft.mod.client.model.ModelFAcrocanthosaurus;
 import net.prehistoricraft.mod.client.model.ModelFElasmotherium;
 import net.prehistoricraft.mod.client.model.ModelFHyena;
@@ -62,8 +61,8 @@ public class ClientProxy extends CommonProxy {
 		RenderingRegistry.registerEntityRenderingHandler(EntityMTitanoceratops.class, new RenderMTitanoceratops(new ModelMTitanoceratops(), 0.3F));
 		RenderingRegistry.registerEntityRenderingHandler(EntityFTitanoceratops.class, new RenderFTitanoceratops(new ModelFTitanoceratops(), 0.3F));
 		
-		RenderingRegistry.registerEntityRenderingHandler(EntityMTenontosaurus.class, new RenderMTenontosaurus(new ModelMTenontosaurus(), 0.3F));
-		RenderingRegistry.registerEntityRenderingHandler(EntityFTenontosaurus.class, new RenderFTenontosaurus(new ModelFTenontosaurus(), 0.3F));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTenontosaurus.class, new RenderMTenontosaurus(new ModelMTenontosaurus(), 0.3F));
+		RenderingRegistry.registerEntityRenderingHandler(EntityTenontosaurus.class, new RenderFTenontosaurus(new ModelFTenontosaurus(), 0.3F));
 	}
 	
 	public void registerTileEntitySpecialRenderer(){

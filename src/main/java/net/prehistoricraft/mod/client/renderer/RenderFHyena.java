@@ -6,7 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
 import net.prehistoricraft.mod.PrehistoriCraft;
-import net.prehistoricraft.mod.client.entity.EntityFHyena;
+import net.prehistoricraft.mod.client.entity.hostile.EntityFHyena;
 import net.prehistoricraft.mod.client.model.ModelFHyena;
 
 public class RenderFHyena extends RenderLiving {

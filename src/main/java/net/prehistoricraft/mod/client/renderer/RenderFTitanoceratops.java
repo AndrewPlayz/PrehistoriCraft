@@ -9,7 +9,7 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 import net.prehistoricraft.mod.PrehistoriCraft;
-import net.prehistoricraft.mod.client.entity.EntityFTitanoceratops;
+import net.prehistoricraft.mod.client.entity.neutral.EntityFTitanoceratops;
 import net.prehistoricraft.mod.client.model.ModelFTitanoceratops;
 
 public class RenderFTitanoceratops extends RenderLiving {

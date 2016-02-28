@@ -1,4 +1,4 @@
-package net.prehistoricraft.mod.client.entity;
+package net.prehistoricraft.mod.client.entity.neutral;
 
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;

@@ -1,4 +1,4 @@
-package net.prehistoricraft.mod.client;
+package net.prehistoricraft.mod.client.world;
 
 import java.util.Random;
 

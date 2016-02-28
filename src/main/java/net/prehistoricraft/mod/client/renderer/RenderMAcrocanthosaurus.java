@@ -9,7 +9,7 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 import net.prehistoricraft.mod.PrehistoriCraft;
-import net.prehistoricraft.mod.client.entity.EntityMAcrocanthosaurus;
+import net.prehistoricraft.mod.client.entity.hostile.EntityMAcrocanthosaurus;
 import net.prehistoricraft.mod.client.model.ModelMAcrocanthosaurus;
 
 public class RenderMAcrocanthosaurus extends RenderLiving {

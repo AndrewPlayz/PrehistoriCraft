@@ -1,5 +1,6 @@
 package net.prehistoricraft.mod.client.renderer;
 
+import net.prehistoricraft.mod.client.entity.passive.EntityTenontosaurus;
 import org.lwjgl.opengl.GL11;
 
 import net.minecraft.client.model.ModelBase;
@@ -9,7 +10,6 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 import net.prehistoricraft.mod.PrehistoriCraft;
-import net.prehistoricraft.mod.client.entity.EntityFTenontosaurus;
 import net.prehistoricraft.mod.client.model.ModelFTenontosaurus;
 
 public class RenderFTenontosaurus extends RenderLiving {
@@ -25,18 +25,18 @@ public class RenderFTenontosaurus extends RenderLiving {
 		
 	}
 	
-	public void renderFTenontosaurus(EntityFTenontosaurus entity, double x, double y, double z, float u, float v){
+	public void renderFTenontosaurus(EntityTenontosaurus entity, double x, double y, double z, float u, float v){
 		super.doRender(entity, x, y, z, u, v);
 				
 	}
 	
 	public void doRenderLiving(EntityLiving entityLiving, double x, double y, double z, float u, float v){
-		renderFTenontosaurus((EntityFTenontosaurus)entityLiving, x, y, z, u, v);
+		renderFTenontosaurus((EntityTenontosaurus)entityLiving, x, y, z, u, v);
 		
 	}
 	
 	public void doRender(Entity entity, double x, double y, double z, float u, float v){
-		renderFTenontosaurus((EntityFTenontosaurus)entity, x, y, z, u, v);
+		renderFTenontosaurus((EntityTenontosaurus)entity, x, y, z, u, v);
 		
 	}
 

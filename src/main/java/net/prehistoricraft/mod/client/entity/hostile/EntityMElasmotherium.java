@@ -1,14 +1,12 @@
-package net.prehistoricraft.mod.client.entity;
+package net.prehistoricraft.mod.client.entity.hostile;
 
-import net.ilexiconn.llibrary.common.entity.multipart.IEntityMultiPart;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.world.World;
 
-public class EntityFAcrocanthosaurus extends EntityMob{		
-	
-	
-	public EntityFAcrocanthosaurus(World world) {
+public class EntityMElasmotherium extends EntityMob{
+
+	public EntityMElasmotherium(World world) {
 		super(world);
 		
 	}

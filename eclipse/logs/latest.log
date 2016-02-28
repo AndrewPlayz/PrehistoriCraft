@@ -1,38 +1,36 @@
-[12:52:12] [main/INFO]: Setting user: Player562
-[12:52:13] [Client thread/INFO]: LWJGL Version: 2.9.1
-[12:52:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:PrehistoriCraft, FMLFileResourcePack:LLibrary
-[12:52:20] [Sound Library Loader/INFO]: Sound engine started
-[12:52:22] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
-[12:52:22] [Client thread/INFO]: Created: 16x16 textures/items-atlas
-[12:52:24] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:PrehistoriCraft, FMLFileResourcePack:LLibrary
-[12:52:24] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[12:52:25] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[12:52:25] [Sound Library Loader/INFO]: Sound engine started
-[12:52:28] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[12:52:28] [Server thread/INFO]: Generating keypair
-[12:52:29] [Server thread/INFO]: Preparing start region for level 0
-[12:52:30] [Server thread/INFO]: Changing view distance to 12, from 10
-[12:52:30] [Server thread/INFO]: Player562[local:E:89154a61] logged in with entity id 419 at (-123.8544404264394, 67.0, 299.67475868280764)
-[12:52:30] [Server thread/INFO]: Player562 joined the game
-[12:52:32] [Server thread/INFO]: Saving and pausing game...
-[12:52:32] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Overworld
-[12:52:32] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Nether
-[12:52:32] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/The End
-[12:53:59] [Server thread/INFO]: Player562 has just earned the achievement [Taking Inventory]
-[12:53:59] [Client thread/INFO]: [CHAT] Player562 has just earned the achievement [Taking Inventory]
-[12:54:04] [Server thread/INFO]: Saving and pausing game...
-[12:54:04] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Overworld
-[12:54:04] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Nether
-[12:54:04] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/The End
-[12:54:24] [Client thread/INFO]: Warning: Clientside chunk ticking took 135 ms
-[12:56:46] [Server thread/INFO]: Saving and pausing game...
-[12:56:46] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Overworld
-[12:56:46] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Nether
-[12:56:46] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/The End
-[12:56:47] [Server thread/INFO]: Stopping server
-[12:56:47] [Server thread/INFO]: Saving players
-[12:56:47] [Server thread/INFO]: Saving worlds
-[12:56:47] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Overworld
-[12:56:47] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Nether
-[12:56:47] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/The End
-[12:56:50] [Client thread/INFO]: Stopping!
+[20:09:19] [main/INFO]: Setting user: Player676
+[20:09:20] [Client thread/INFO]: LWJGL Version: 2.9.1
+[20:09:29] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:PrehistoriCraft, FMLFileResourcePack:LLibrary
+[20:09:30] [Sound Library Loader/INFO]: Sound engine started
+[20:09:31] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[20:09:31] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[20:09:34] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:PrehistoriCraft, FMLFileResourcePack:LLibrary
+[20:09:34] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[20:09:34] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[20:09:35] [Sound Library Loader/INFO]: Sound engine started
+[20:10:01] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[20:10:01] [Server thread/INFO]: Generating keypair
+[20:10:02] [Server thread/INFO]: Preparing start region for level 0
+[20:10:03] [Server thread/INFO]: Changing view distance to 12, from 10
+[20:10:03] [Server thread/INFO]: Player676[local:E:87921b01] logged in with entity id 300 at (-538.3963523883875, 18.484861213048866, 432.11621433061936)
+[20:10:03] [Server thread/INFO]: Player676 joined the game
+[20:10:17] [Server thread/INFO]: Player676 has just earned the achievement [Taking Inventory]
+[20:10:17] [Client thread/INFO]: [CHAT] Player676 has just earned the achievement [Taking Inventory]
+[20:10:26] [Server thread/WARN]: Skipping Entity with id 28
+[20:10:27] [Server thread/WARN]: Skipping Entity with id 28
+[20:10:27] [Server thread/WARN]: Skipping Entity with id 28
+[20:10:27] [Server thread/WARN]: Skipping Entity with id 28
+[20:10:27] [Server thread/WARN]: Skipping Entity with id 28
+[20:10:30] [Server thread/WARN]: Skipping Entity with id 28
+[20:10:30] [Server thread/WARN]: Skipping Entity with id 28
+[20:10:30] [Server thread/WARN]: Skipping Entity with id 28
+[20:10:30] [Server thread/WARN]: Skipping Entity with id 28
+[20:10:40] [Client thread/INFO]: Stopping!
+[20:10:40] [Server thread/INFO]: Stopping server
+[20:10:40] [Server thread/INFO]: Saving players
+[20:10:40] [Server thread/INFO]: Saving worlds
+[20:10:40] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Overworld
+[20:10:40] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/Nether
+[20:10:40] [Server thread/INFO]: Saving chunks for level 'PrehistoriCraft Test World'/The End
+[20:10:40] [Client Shutdown Thread/INFO]: Stopping server
+[20:10:40] [Client Shutdown Thread/INFO]: Saving players

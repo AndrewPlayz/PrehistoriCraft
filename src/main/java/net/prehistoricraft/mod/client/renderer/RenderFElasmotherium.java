@@ -9,7 +9,7 @@ import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.ResourceLocation;
 import net.prehistoricraft.mod.PrehistoriCraft;
-import net.prehistoricraft.mod.client.entity.EntityFElasmotherium;
+import net.prehistoricraft.mod.client.entity.hostile.EntityFElasmotherium;
 import net.prehistoricraft.mod.client.model.ModelFElasmotherium;
 
 public class RenderFElasmotherium extends RenderLiving {
