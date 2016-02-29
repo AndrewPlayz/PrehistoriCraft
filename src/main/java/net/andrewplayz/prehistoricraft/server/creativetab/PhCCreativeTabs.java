@@ -1,0 +1,41 @@
+package net.andrewplayz.prehistoricraft.server.creativetab;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
+import net.ilexiconn.llibrary.common.content.IContentHandler;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class PhCCreativeTabs implements IContentHandler {
+    public static CreativeTabs prehistoricraftTab;
+    public static CreativeTabs prehistoricraftQuaternaryTab;
+    public static CreativeTabs prehistoricraftCretaceousTab;
+
+    @Override
+    public void init() {
+        prehistoricraftTab = new CreativeTabs("prehistoricraft") {
+            @SideOnly(Side.CLIENT)
+            public Item getTabIconItem() {
+                return Item.getItemFromBlock(PhCBlockRegistry.oreChronositeOre);
+            }
+        };
+        prehistoricraftQuaternaryTab = new CreativeTabs("prehistoricraftquaternary") {
+            @SideOnly(Side.CLIENT)
+            public Item getTabIconItem() {
+                return Item.getItemFromBlock(PhCBlockRegistry.oreChronositeOre);
+            }
+        };
+        prehistoricraftCretaceousTab = new CreativeTabs("prehistoricraftcretaceous") {
+            @SideOnly(Side.CLIENT)
+            public Item getTabIconItem() {
+                return Item.getItemFromBlock(PhCBlockRegistry.oreChronositeOre);
+            }
+        };
+    }
+
+    @Override
+    public void gameRegistry() throws Exception {
+
+    }
+}
