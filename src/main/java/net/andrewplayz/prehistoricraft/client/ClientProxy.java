@@ -17,16 +17,15 @@ public class ClientProxy extends ServerProxy {
     @Override
     public void onPreInit() {
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLaptopBlock.class, new RenderLaptop());
+    }
 
+    @Override
+    public void onInit() {
         RenderingRegistry.registerEntityRenderingHandler(EntityHyena.class, new RenderPrehistoric<EntityHyena>(new ModelMHyena(), "MHyena", "FHyena", 0.3F));
         RenderingRegistry.registerEntityRenderingHandler(EntityElasmotherium.class, new RenderPrehistoric<EntityElasmotherium>(new ModelMElasmotherium(), "MElasmotherium", "FElasmotherium", 0.3F, 0.8F));
         RenderingRegistry.registerEntityRenderingHandler(EntityAcrocanthosaurus.class, new RenderPrehistoric<EntityAcrocanthosaurus>(new ModelMAcrocanthosaurus(), "MAcrocanthosaurus", "FAcrocanthosaurus", 0.3F, 1.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityTitanoceratops.class, new RenderPrehistoric<EntityTitanoceratops>(new ModelMTitanoceratops(), "MTitanoceratops", "FTitanoceratops", 0.3F, 1.2F));
         RenderingRegistry.registerEntityRenderingHandler(EntityTenontosaurus.class, new RenderPrehistoric<EntityTenontosaurus>(new ModelMTenontosaurus(), "MTenontosaurus", "FTenontosaurus", 0.3F, 1.2F));
-    }
-
-    @Override
-    public void onInit() {
 
     }
 
