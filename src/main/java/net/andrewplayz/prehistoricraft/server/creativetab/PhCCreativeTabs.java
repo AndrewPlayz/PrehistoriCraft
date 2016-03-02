@@ -1,11 +1,11 @@
 package net.andrewplayz.prehistoricraft.server.creativetab;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
 import net.ilexiconn.llibrary.common.content.IContentHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class PhCCreativeTabs implements IContentHandler {
     public static CreativeTabs prehistoricraftTab;

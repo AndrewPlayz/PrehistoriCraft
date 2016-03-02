@@ -1,13 +1,5 @@
 package net.andrewplayz.prehistoricraft;
 
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.andrewplayz.prehistoricraft.server.ServerProxy;
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
 import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabs;
@@ -16,31 +8,37 @@ import net.andrewplayz.prehistoricraft.server.item.PhCItemRegistry;
 import net.andrewplayz.prehistoricraft.server.recipe.PhCRecipes;
 import net.andrewplayz.prehistoricraft.server.world.PrehistoriCraftWorldGen;
 import net.ilexiconn.llibrary.common.content.ContentHelper;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = PrehistoriCraft.MODID, name = "PrehistoriCraft", version = PrehistoriCraft.VERSION, dependencies = "required-after:llibrary@[" + PrehistoriCraft.LLIBRARY_VERSION + ",)")
 public class PrehistoriCraft {
     public static final String MODID = "prehistoricraft";
     public static final String VERSION = "0.1.0";
-    public static final String LLIBRARY_VERSION = "0.7.2";
+    public static final String LLIBRARY_VERSION = "0.9.2";
 
-    @Instance(MODID)
+    @Mod.Instance(MODID)
     public static PrehistoriCraft instance;
     @SidedProxy(serverSide = "net.andrewplayz.prehistoricraft.server.ServerProxy", clientSide = "net.andrewplayz.prehistoricraft.client.ClientProxy")
     public static ServerProxy proxy;
 
-    @EventHandler
+    @Mod.EventHandler
     public void onPreInit(FMLPreInitializationEvent event) {
         ContentHelper.init(new PhCCreativeTabs(), new PhCItemRegistry(), new PhCBlockRegistry(), new PhCRecipes(), new PhCEntityRegistry());
         proxy.onPreInit();
     }
 
-    @EventHandler
+    @Mod.EventHandler
     public void onInit(FMLInitializationEvent event) {
         GameRegistry.registerWorldGenerator(new PrehistoriCraftWorldGen(), 0);
         proxy.onInit();
     }
 
-    @EventHandler
+    @Mod.EventHandler
     public void onPostInit(FMLPostInitializationEvent event) {
         proxy.onPostInit();
     }

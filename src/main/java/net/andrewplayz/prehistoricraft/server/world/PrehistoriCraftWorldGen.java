@@ -1,11 +1,12 @@
 package net.andrewplayz.prehistoricraft.server.world;
 
-import cpw.mods.fml.common.IWorldGenerator;
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+import net.minecraftforge.fml.common.IWorldGenerator;
 
 import java.util.Random;
 
@@ -13,7 +14,7 @@ public class PrehistoriCraftWorldGen implements IWorldGenerator {
 
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-        switch (world.provider.dimensionId) {
+        switch (world.provider.getDimensionId()) {
             case 0:
                 //Generate the Over World
                 generateSurface(world, random, chunkX * 16, chunkZ * 16);
@@ -46,7 +47,7 @@ public class PrehistoriCraftWorldGen implements IWorldGenerator {
             int posX = blockXPos + random.nextInt(maxX);
             int posY = minY + random.nextInt(MaxY - minY);
             int posZ = blockZPos + random.nextInt(maxZ);
-            (new WorldGenMinable(block, maxVeinSize)).generate(world, random, posX, posY, posZ);
+            (new WorldGenMinable(block.getDefaultState(), maxVeinSize)).generate(world, random, new BlockPos(posX, posY, posZ));
         }
     }
 }
