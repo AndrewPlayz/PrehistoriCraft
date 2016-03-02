@@ -2,6 +2,7 @@ package net.andrewplayz.prehistoricraft.server.entity;
 
 import net.andrewplayz.prehistoricraft.server.world.breeding.PermanentPartner;
 import net.andrewplayz.prehistoricraft.server.world.seasons.SeasonBreeding;
+import net.java.games.input.Component;
 import net.minecraft.entity.EntityCreature;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
@@ -35,7 +36,7 @@ public class EntityPrehistoric extends EntityCreature {
         super.readEntityFromNBT(compound);
         EntityGender.readFromNBT(this, compound);
     }
-
+    
     public EntityGender getGender() {
         return EntityGender.getGender(this);
     }
