@@ -11,7 +11,6 @@ import net.minecraft.world.World;
 public class EntityTenontosaurus extends EntityPrehistoric {
     public EntityTenontosaurus(World world) {
         super(world);
-        this.getNavigator().setAvoidsWater(true);
         this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(2, new EntityAIWatchClosest(this, EntityPlayer.class, 12.0F));

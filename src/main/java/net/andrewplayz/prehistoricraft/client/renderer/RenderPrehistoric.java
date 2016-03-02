@@ -2,14 +2,14 @@ package net.andrewplayz.prehistoricraft.client.renderer;
 
 import net.andrewplayz.prehistoricraft.PrehistoriCraft;
 import net.andrewplayz.prehistoricraft.server.entity.EntityGender;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
-public class RenderPrehistoric extends RenderLiving {
+public class RenderPrehistoric<T extends EntityLiving> extends RenderLiving<T> {
     private ResourceLocation maleTexture;
     private ResourceLocation femaleTexture;
     private float scale;
@@ -19,14 +19,14 @@ public class RenderPrehistoric extends RenderLiving {
     }
 
     public RenderPrehistoric(ModelBase model, String maleTexture, String femaleTexture, float shadow, float scale) {
-        super(model, shadow);
+        super(Minecraft.getMinecraft().getRenderManager(), model, shadow);
         this.maleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/model/" + maleTexture + ".png");
         this.femaleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/model/" + femaleTexture + ".png");
         this.scale = scale;
     }
 
     @Override
-    protected ResourceLocation getEntityTexture(Entity entity) {
+    protected ResourceLocation getEntityTexture(T entity) {
         EntityGender gender = EntityGender.getGender(entity);
         switch (gender) {
             case MALE:
@@ -39,7 +39,7 @@ public class RenderPrehistoric extends RenderLiving {
     }
 
     @Override
-    protected void preRenderCallback(EntityLivingBase entitylivingbase, float partialTick) {
+    protected void preRenderCallback(T entity, float partialTick) {
         GL11.glScalef(scale, scale, scale);
     }
 }
