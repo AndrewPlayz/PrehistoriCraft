@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "phc:blocks/block_aluminium_ore.png"
+  }
+}

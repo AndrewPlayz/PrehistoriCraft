@@ -1,0 +1,7 @@
+{
+  "variants": {
+     "normal": {
+        "model": "phc:blocks/block_aluminium_ore"
+     }
+   }
+}

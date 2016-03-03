@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
 public class RenderLaptop extends TileEntitySpecialRenderer<TileEntityLaptopBlock> {
-    private static final ResourceLocation texture = new ResourceLocation(PrehistoriCraft.MODID + ":" + "textures/model/Laptop.png");
+    private static final ResourceLocation texture = new ResourceLocation(PrehistoriCraft.MODID + ":" + "assets/prehistoricraft/textures/blocks/laptop_inactive.png");
 
     private ModelLaptop model;
 

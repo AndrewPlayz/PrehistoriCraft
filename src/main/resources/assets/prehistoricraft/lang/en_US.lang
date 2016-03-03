@@ -14,10 +14,6 @@ item.ItemChronositeDust.name=Chronosite Dust
 item.ItemTreeTinder.name=[WIP]
 
 PrehistoriCraft Entities
-entity.FHyena.name=Female Cave Hyena
-entity.MHyena.name=Male Cave Hyena
-entity.FElasmotherium.name=Female Elasmotherium
-entity.MElasmotherium.name=Male Elasmotherium
 entity.FAcrocanthosaurus.name=Female Acrocanthosaurus
 entity.MAcrocanthosaurus.name=Male Acrocanthosaurus
 entity.FTitanoceratops.name=Female Titanoceratops
