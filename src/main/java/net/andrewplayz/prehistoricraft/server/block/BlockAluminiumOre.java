@@ -8,6 +8,7 @@ public class BlockAluminiumOre extends Block {
     public BlockAluminiumOre(Material material) {
         super(material);
 
+        this.setUnlocalizedName("BlockAluminiumOre");
         this.setHardness(3.0f);
         this.setResistance(15.0f);
         this.setStepSound(soundTypeStone);

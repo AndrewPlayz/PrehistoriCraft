@@ -4,6 +4,7 @@ import net.andrewplayz.prehistoricraft.client.model.*;
 import net.andrewplayz.prehistoricraft.client.renderer.RenderLaptop;
 import net.andrewplayz.prehistoricraft.client.renderer.RenderPrehistoric;
 import net.andrewplayz.prehistoricraft.server.ServerProxy;
+import net.andrewplayz.prehistoricraft.server.block.BlockAluminiumOre;
 import net.andrewplayz.prehistoricraft.server.block.entity.TileEntityLaptopBlock;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityAcrocanthosaurus;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityElasmotherium;
@@ -12,6 +13,7 @@ import net.andrewplayz.prehistoricraft.server.entity.neutral.EntityTitanoceratop
 import net.andrewplayz.prehistoricraft.server.entity.passive.EntityTenontosaurus;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ClientProxy extends ServerProxy {
     @Override
