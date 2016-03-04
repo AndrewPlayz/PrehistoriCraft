@@ -1,7 +1,7 @@
 {
   "variants": {
      "normal": {
-        "model": "phc:blocks/block_aluminium_ore"
+        "model": "prehistoricraft:blocks/block_aluminium_ore"
      }
    }
 }

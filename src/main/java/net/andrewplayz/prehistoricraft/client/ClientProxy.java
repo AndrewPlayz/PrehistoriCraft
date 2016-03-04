@@ -14,6 +14,7 @@ import net.andrewplayz.prehistoricraft.server.entity.passive.EntityTenontosaurus
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.andrewplayz.prehistoricraft.client.BlockRenderRegistry;
 
 public class ClientProxy extends ServerProxy {
     @Override
@@ -33,6 +34,6 @@ public class ClientProxy extends ServerProxy {
 
     @Override
     public void onPostInit() {
-
+        BlockRenderRegistry.registerBlockRenderer();
     }
 }
