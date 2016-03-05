@@ -1,14 +1,10 @@
-package net.gegy1000.chatbot;
-
-import edu.stanford.nlp.parser.common.ParserQuery;
-import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
-import edu.stanford.nlp.parser.lexparser.LexicalizedParserQuery;
-
-public class Main
 {
-    public static void main(String[] args)
-    {
-        LexicalizedParser parser = new LexicalizedParser();
-        ParserQuery query = new LexicalizedParserQuery(parser);
+    "parent": "prehistoricraft:block/blockaluminiumore",
+    "display": {
+        "thirdperson": {
+            "rotation": [ 10, -45, 170 ],
+            "translation": [ 0, 1.5, -2.75 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
     }
 }

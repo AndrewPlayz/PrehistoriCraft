@@ -31,11 +31,12 @@ public class ClientProxy extends ServerProxy {
         RenderingRegistry.registerEntityRenderingHandler(EntityTitanoceratops.class, new RenderPrehistoric<EntityTitanoceratops>(new ModelMTitanoceratops(), "MTitanoceratops", "FTitanoceratops", 0.3F, 1.2F));
         RenderingRegistry.registerEntityRenderingHandler(EntityTenontosaurus.class, new RenderPrehistoric<EntityTenontosaurus>(new ModelMTenontosaurus(), "MTenontosaurus", "FTenontosaurus", 0.3F, 1.2F));
 
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistry.oreAluminiumOre), 0, new ModelResourceLocation("prehistoricraft:blockaluminiumore", "inventory"));
+
     }
 
     @Override
     public void onPostInit() {
-        //(PhCBlockRegistry.oreAluminiumOre);
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistry.oreAluminiumOre), 0, new ModelResourceLocation("prehistoricraft:blockaluminiumore", "inventory"));
     }
 }
