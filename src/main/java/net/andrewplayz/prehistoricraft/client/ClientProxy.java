@@ -4,17 +4,18 @@ import net.andrewplayz.prehistoricraft.client.model.*;
 import net.andrewplayz.prehistoricraft.client.renderer.RenderLaptop;
 import net.andrewplayz.prehistoricraft.client.renderer.RenderPrehistoric;
 import net.andrewplayz.prehistoricraft.server.ServerProxy;
-import net.andrewplayz.prehistoricraft.server.block.BlockAluminiumOre;
+import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
 import net.andrewplayz.prehistoricraft.server.block.entity.TileEntityLaptopBlock;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityAcrocanthosaurus;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityElasmotherium;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityHyena;
 import net.andrewplayz.prehistoricraft.server.entity.neutral.EntityTitanoceratops;
 import net.andrewplayz.prehistoricraft.server.entity.passive.EntityTenontosaurus;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.item.Item;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.andrewplayz.prehistoricraft.client.BlockRenderRegistry;
 
 public class ClientProxy extends ServerProxy {
     @Override
@@ -34,6 +35,7 @@ public class ClientProxy extends ServerProxy {
 
     @Override
     public void onPostInit() {
-        BlockRenderRegistry.registerBlockRenderer();
+        //(PhCBlockRegistry.oreAluminiumOre);
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistry.oreAluminiumOre), 0, new ModelResourceLocation("prehistoricraft:BlockAluminiumOre", "inventory"));
     }
 }

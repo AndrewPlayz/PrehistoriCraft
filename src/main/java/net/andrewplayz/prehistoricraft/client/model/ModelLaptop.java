@@ -182,7 +182,7 @@ public class ModelLaptop extends MowzieModelBase {
     }
 
     /**
-     * This is a helper function from Tabula to set the rotation of model parts
+     * This is a helper function from Tabula to set the rotation of models parts
      */
     public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {
         modelRenderer.rotateAngleX = x;

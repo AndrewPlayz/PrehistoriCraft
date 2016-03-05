@@ -1,0 +1,14 @@
+package net.gegy1000.chatbot;
+
+import edu.stanford.nlp.parser.common.ParserQuery;
+import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
+import edu.stanford.nlp.parser.lexparser.LexicalizedParserQuery;
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        LexicalizedParser parser = new LexicalizedParser();
+        ParserQuery query = new LexicalizedParserQuery(parser);
+    }
+}
