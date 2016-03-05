@@ -19,24 +19,24 @@ public class PhCBlockRegistry implements IContentHandler {
     @Override
     public void init() {
         oreAluminiumOre = new BlockAluminiumOre(Material.rock).setUnlocalizedName("blockaluminiumore");
-        oreChronositeOre = new BlockChronositeOre(Material.rock).setUnlocalizedName("BlockChronositeOre");
-        blockAluminiumBlock = new BlockAluminium(Material.iron).setUnlocalizedName("BlockAluminium");
-        blockChronositeBlock = new BlockChronosite(Material.iron).setUnlocalizedName("BlockChronosite");
-        blockVolcanicAsh = new BlockVolcanic(Material.snow).setUnlocalizedName("BlockVolcanicAsh");
-        blockVolcanicRock = new BlockVolcanic(Material.rock).setUnlocalizedName("BlockVolcanicRock");
-        blockVolcanicSoil = new BlockVolcanic(Material.grass).setUnlocalizedName("BlockVolcanicSoil");
-        blockLaptop = new BlockLaptop(Material.anvil).setUnlocalizedName("LaptopBlock");
+        oreChronositeOre = new BlockChronositeOre(Material.rock).setUnlocalizedName("blockchronositeore");
+        blockAluminiumBlock = new BlockAluminiumBlock(Material.iron).setUnlocalizedName("blockaluminiumblock");
+        blockChronositeBlock = new BlockChronositeBlock(Material.iron).setUnlocalizedName("blockchronositeblock");
+        blockVolcanicAsh = new BlockVolcanic(Material.snow).setUnlocalizedName("blockvolcanicash");
+        blockVolcanicRock = new BlockVolcanic(Material.rock).setUnlocalizedName("blockvolcanicrock");
+        blockVolcanicSoil = new BlockVolcanic(Material.grass).setUnlocalizedName("blockvolcanicsoil");
+        blockLaptop = new BlockLaptop(Material.anvil).setUnlocalizedName("blocklaptop");
     }
 
     @Override
     public void gameRegistry() throws Exception {
-        GameRegistry.registerBlock(oreAluminiumOre, "BlockAluminiumOre");
-        GameRegistry.registerBlock(oreChronositeOre, "BlockChronositeOre");
-        GameRegistry.registerBlock(blockAluminiumBlock, "BlockAluminium");
-        GameRegistry.registerBlock(blockChronositeBlock, "BlockChronosite");
-        GameRegistry.registerBlock(blockVolcanicAsh, "BlockVolcanicAsh");
-        GameRegistry.registerBlock(blockVolcanicRock, "BlockVolcanicRock");
-        GameRegistry.registerBlock(blockVolcanicSoil, "BlockVolcanicSoil");
-        GameRegistry.registerBlock(blockLaptop, "LaptopBlock");
+        GameRegistry.registerBlock(oreAluminiumOre, "blockaluminiumore");
+        GameRegistry.registerBlock(oreChronositeOre, "blockchronositeore");
+        GameRegistry.registerBlock(blockAluminiumBlock, "blockaluminiumblock");
+        GameRegistry.registerBlock(blockChronositeBlock, "blockchronositeblock");
+        GameRegistry.registerBlock(blockVolcanicAsh, "blockvolcanicash");
+        GameRegistry.registerBlock(blockVolcanicRock, "blockvolcanicrock");
+        GameRegistry.registerBlock(blockVolcanicSoil, "blockvolcanicsoil");
+        GameRegistry.registerBlock(blockLaptop, "blocklaptop");
     }
 }

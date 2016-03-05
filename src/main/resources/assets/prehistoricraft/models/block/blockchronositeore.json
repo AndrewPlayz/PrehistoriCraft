@@ -1,6 +1,6 @@
 {
     "parent": "block/cube_all",
     "textures": {
-      "all": "prehistoricraft:blocks/blockaluminiumore"
+      "all": "prehistoricraft:blocks/blockchronositeore"
   }
 }
