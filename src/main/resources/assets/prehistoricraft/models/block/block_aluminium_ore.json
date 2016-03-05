@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "prehistoricraft:blocks/block_aluminium_ore.png"
+    "all": "prehistoricraft:blockaluminiumore"
   }
 }

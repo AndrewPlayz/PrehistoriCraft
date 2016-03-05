@@ -36,6 +36,6 @@ public class ClientProxy extends ServerProxy {
     @Override
     public void onPostInit() {
         //(PhCBlockRegistry.oreAluminiumOre);
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistry.oreAluminiumOre), 0, new ModelResourceLocation("prehistoricraft:BlockAluminiumOre", "inventory"));
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistry.oreAluminiumOre), 0, new ModelResourceLocation("prehistoricraft:blockaluminiumore", "inventory"));
     }
 }
