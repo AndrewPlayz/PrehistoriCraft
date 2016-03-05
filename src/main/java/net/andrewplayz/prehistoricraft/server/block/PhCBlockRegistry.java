@@ -18,7 +18,7 @@ public class PhCBlockRegistry implements IContentHandler {
 
     @Override
     public void init() {
-        oreAluminiumOre = new BlockAluminiumOre(Material.rock).setUnlocalizedName("BlockAluminiumOre");
+        oreAluminiumOre = new BlockAluminiumOre(Material.rock).setUnlocalizedName("blockaluminiumore");
         oreChronositeOre = new BlockChronositeOre(Material.rock).setUnlocalizedName("BlockChronositeOre");
         blockAluminiumBlock = new BlockAluminium(Material.iron).setUnlocalizedName("BlockAluminium");
         blockChronositeBlock = new BlockChronosite(Material.iron).setUnlocalizedName("BlockChronosite");
