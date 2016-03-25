@@ -1,6 +1,19 @@
 package net.andrewplayz.prehistoricraft.client;
 
+import net.andrewplayz.prehistoricraft.client.model.acrocanthosaurus.AcrocanthosaurusFemale;
+import net.andrewplayz.prehistoricraft.client.model.acrocanthosaurus.AcrocanthosaurusMale;
+import net.andrewplayz.prehistoricraft.client.model.ornithomimus.OrnithomimusFemale;
+import net.andrewplayz.prehistoricraft.client.model.ornithomimus.OrnithomimusMale;
+import net.andrewplayz.prehistoricraft.client.model.rugocaudia.RugocaudiaFemale;
+import net.andrewplayz.prehistoricraft.client.model.rugocaudia.RugocaudiaMale;
+import net.andrewplayz.prehistoricraft.client.model.sauropelta.SauropeltaFemale;
+import net.andrewplayz.prehistoricraft.client.model.sauropelta.SauropeltaMale;
+import net.andrewplayz.prehistoricraft.client.model.sauroposeidon.SauroposeidonFemale;
+import net.andrewplayz.prehistoricraft.client.model.sauroposeidon.SauroposeidonMale;
+import net.andrewplayz.prehistoricraft.client.model.tenontosaurus.TenontosaurusFemale;
+import net.andrewplayz.prehistoricraft.client.model.tenontosaurus.TenontosaurusMale;
 import net.andrewplayz.prehistoricraft.client.renderer.RenderLaptop;
+import net.andrewplayz.prehistoricraft.client.renderer.RenderPrehistoric;
 import net.andrewplayz.prehistoricraft.server.ServerProxy;
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
 import net.andrewplayz.prehistoricraft.server.block.entity.TileEntityLaptopBlock;
@@ -10,15 +23,21 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends ServerProxy {
     @Override
     public void onPreInit() {
+        //3D Rendered Blocks
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLaptopBlock.class, new RenderLaptop());
+
+        //Mobs Renderer
+
     }
 
     @Override
     public void onInit() {
+        //Items Renderer
         PhCItemRenderer.registerItemRender();
     }
 

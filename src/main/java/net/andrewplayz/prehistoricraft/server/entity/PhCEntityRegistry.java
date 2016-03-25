@@ -1,9 +1,6 @@
 package net.andrewplayz.prehistoricraft.server.entity;
 
 import net.andrewplayz.prehistoricraft.PrehistoriCraft;
-import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityAcrocanthosaurus;
-import net.andrewplayz.prehistoricraft.server.entity.neutral.EntityTitanoceratops;
-import net.andrewplayz.prehistoricraft.server.entity.passive.EntityTenontosaurus;
 import net.ilexiconn.llibrary.common.content.IContentHandler;
 import net.ilexiconn.llibrary.common.entity.EntityHelper;
 
