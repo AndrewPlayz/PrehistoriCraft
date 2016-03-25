@@ -9,9 +9,9 @@ tile.blockVolcanicRock.name=Volcanic Rock
 tile.blockVolcanicSoil.name=Volcanic Soil
 
 PrehistoriCraft Items
-item.ItemAluminiumIngot.name=Aluminium Ingot
-item.ItemChronositeDust.name=Chronosite Dust
-item.ItemTreeTinder.name=[WIP]
+item.itemaluminiumingot.name=Aluminium Ingot
+item.itemchronositedust.name=Chronosite Dust
+item.itemtreetinder.name=Tree Tinder
 
 PrehistoriCraft Entities
 entity.FAcrocanthosaurus.name=Female Acrocanthosaurus

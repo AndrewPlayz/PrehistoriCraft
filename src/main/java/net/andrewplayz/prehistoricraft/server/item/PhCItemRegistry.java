@@ -11,15 +11,15 @@ public class PhCItemRegistry implements IContentHandler {
 
     @Override
     public void init() {
-        itemAluminiumIngot = new ItemAluminiumIngot().setUnlocalizedName("ItemAluminiumIngot");
-        itemChronositeDust = new ItemChronositeDust().setUnlocalizedName("ItemChronositeDust");
-        itemTreeTinder = new ItemTreeTinder().setUnlocalizedName("ItemTreeTinder");
+        itemAluminiumIngot = new ItemAluminiumIngot().setUnlocalizedName("itemaluminiumingot");
+        itemChronositeDust = new ItemChronositeDust().setUnlocalizedName("itemchronositedust");
+        itemTreeTinder = new ItemTreeTinder().setUnlocalizedName("itemtreetinder");
     }
 
     @Override
     public void gameRegistry() throws Exception {
-        GameRegistry.registerItem(itemAluminiumIngot, "ItemAluminiumIngot");
-        GameRegistry.registerItem(itemChronositeDust, "ItemChronositeDust");
-        GameRegistry.registerItem(itemTreeTinder, "ItemTreeTinder");
+        GameRegistry.registerItem(itemAluminiumIngot, "itemaluminiumingot");
+        GameRegistry.registerItem(itemChronositeDust, "itemchronositedust");
+        GameRegistry.registerItem(itemTreeTinder, "itemtreetinder");
     }
 }

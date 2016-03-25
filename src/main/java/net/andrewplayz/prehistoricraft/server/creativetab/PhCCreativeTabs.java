@@ -23,13 +23,13 @@ public class PhCCreativeTabs implements IContentHandler {
         prehistoricraftQuaternaryTab = new CreativeTabs("prehistoricraftquaternary") {
             @SideOnly(Side.CLIENT)
             public Item getTabIconItem() {
-                return Item.getItemFromBlock(PhCBlockRegistry.oreChronositeOre);
+                return Item.getItemFromBlock(PhCBlockRegistry.blockAluminiumBlock);
             }
         };
         prehistoricraftCretaceousTab = new CreativeTabs("prehistoricraftcretaceous") {
             @SideOnly(Side.CLIENT)
             public Item getTabIconItem() {
-                return Item.getItemFromBlock(PhCBlockRegistry.oreChronositeOre);
+                return Item.getItemFromBlock(PhCBlockRegistry.blockVolcanicSoil);
             }
         };
     }
