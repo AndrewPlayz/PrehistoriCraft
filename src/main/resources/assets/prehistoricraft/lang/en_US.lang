@@ -1,9 +1,9 @@
 PrehistoriCraft Blocks
-tile.blockAluminiumOre.name=Aluminium Ore
-tile.blockChronositeOre.name=Chronosite Ore
-tile.blockAluminium.name=Aluminium Block
-tile.blockChronosite.name=Chronosite Block
-tile.laptopBlock.name=[WIP]
+tile.blockaluminiumore.name=Aluminium Ore
+tile.blockchronositeore.name=Chronosite Ore
+tile.blockaluminiumblock.name=Aluminium Block
+tile.blockchronositeblock.name=Chronosite Block
+tile.blocklaptop.name=Laptop
 tile.blockVolcanicAsh.name=Volcanic Ash
 tile.blockVolcanicRock.name=Volcanic Rock
 tile.blockVolcanicSoil.name=Volcanic Soil
