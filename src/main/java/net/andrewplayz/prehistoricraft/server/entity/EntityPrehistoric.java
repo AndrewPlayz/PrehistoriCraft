@@ -4,6 +4,7 @@ import net.andrewplayz.prehistoricraft.server.world.breeding.PermanentPartner;
 import net.andrewplayz.prehistoricraft.server.world.seasons.SeasonBreeding;
 import net.java.games.input.Component;
 import net.minecraft.entity.EntityCreature;
+import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 

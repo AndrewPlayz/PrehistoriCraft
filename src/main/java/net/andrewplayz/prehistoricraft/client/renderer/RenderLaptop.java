@@ -1,9 +1,10 @@
 package net.andrewplayz.prehistoricraft.client.renderer;
 
 import net.andrewplayz.prehistoricraft.PrehistoriCraft;
-import net.andrewplayz.prehistoricraft.client.model.ModelLaptop;
+import net.andrewplayz.prehistoricraft.client.model.blocks.ModelLaptop;
 import net.andrewplayz.prehistoricraft.server.block.entity.TileEntityLaptopBlock;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 
@@ -16,6 +17,9 @@ public class RenderLaptop extends TileEntitySpecialRenderer<TileEntityLaptopBloc
         this.model = new ModelLaptop();
     }
 
+    public static void render(){
+    }
+
     @Override
     public void renderTileEntityAt(TileEntityLaptopBlock te, double x, double y, double z, float partialTicks, int destroyStage) {
         GL11.glPushMatrix();
@@ -26,9 +30,8 @@ public class RenderLaptop extends TileEntitySpecialRenderer<TileEntityLaptopBloc
         this.bindTexture(texture);
 
         GL11.glPushMatrix();
-        this.model.renderModel(0.0625F);
-        GL11.glPopMatrix();
 
+        GL11.glPopMatrix();
         GL11.glPopMatrix();
     }
 }

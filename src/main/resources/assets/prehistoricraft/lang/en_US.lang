@@ -14,12 +14,12 @@ item.itemchronositedust.name=Chronosite Dust
 item.itemtreetinder.name=Tree Tinder
 
 PrehistoriCraft Entities
-entity.FAcrocanthosaurus.name=Female Acrocanthosaurus
-entity.MAcrocanthosaurus.name=Male Acrocanthosaurus
-entity.FTitanoceratops.name=Female Titanoceratops
-entity.MTitanoceratops.name=Male Titanoceratops
-entity.FTenontosaurus.name=Female Tenontosaurus
-entity.MTenontosaurus.name=Male Tenontosaurus
+entity.prehistoricraft.rugocaudia.name=Spawn Rugocaudia
+entity.prehistoricraft.sauroposeidon.name=Spawn Sauroposeidon
+entity.prehistoricraft.sauropelta.name=Spawn Sauropelta
+entity.prehistoricraft.acrocanthosaurus.name=Spawn Acrocanthosaurus
+entity.prehistoricraft.tenontosaurus.name=Spawn Tenontosaurus
+entity.prehistoricraft.ornithomimus.name=Spawn Ornithomimus
 
 PrehistoriCraft CreativeTabs
 itemGroup.prehistoricraft=PrehistoriCraft OverWorld

@@ -1,7 +1,7 @@
 {
   "variants": {
-     "normal": {
-        "model": "prehistoricraft:blockaluminiumblock"
-     }
-   }
+    "normal": {
+      "model": "prehistoricraft:blockaluminiumblock"
+    }
+  }
 }

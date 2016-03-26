@@ -2,9 +2,10 @@ package net.andrewplayz.prehistoricraft.client.model.acrocanthosaurus;
 
 import net.ilexiconn.llibrary.client.model.modelbase.MowzieModelBase;
 import net.ilexiconn.llibrary.client.model.modelbase.MowzieModelRenderer;
+import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
-public class AcrocanthosaurusMale extends MowzieModelBase{
+public class AcrocanthosaurusMale extends MowzieModelBase {
     public MowzieModelRenderer Mainbody1;
     public MowzieModelRenderer Thighright;
     public MowzieModelRenderer Thightleft;
@@ -528,9 +529,9 @@ public class AcrocanthosaurusMale extends MowzieModelBase{
     /**
      * This is a helper function from Tabula to set the rotation of model parts
      */
-    public void setRotateAngle(MowzieModelRenderer MowzieModelRenderer, float x, float y, float z) {
-        MowzieModelRenderer.rotateAngleX = x;
-        MowzieModelRenderer.rotateAngleY = y;
-        MowzieModelRenderer.rotateAngleZ = z;
+    public void setRotateAngle(ModelRenderer modelRenderer, float x, float y, float z) {
+        modelRenderer.rotateAngleX = x;
+        modelRenderer.rotateAngleY = y;
+        modelRenderer.rotateAngleZ = z;
     }
 }

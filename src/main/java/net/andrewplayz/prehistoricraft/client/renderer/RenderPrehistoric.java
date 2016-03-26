@@ -20,8 +20,8 @@ public class RenderPrehistoric<T extends EntityLiving> extends RenderLiving<T> {
 
     public RenderPrehistoric(ModelBase model, String maleTexture, String femaleTexture, float shadow, float scale) {
         super(Minecraft.getMinecraft().getRenderManager(), model, shadow);
-        this.maleTexture = new ResourceLocation(PrehistoriCraft.MODID, "assets/prehistoricraft/models/" + maleTexture + ".png");
-        this.femaleTexture = new ResourceLocation(PrehistoriCraft.MODID, "assets/prehistoricraft/models/" + femaleTexture + ".png");
+        this.maleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/entities/" + maleTexture + ".png");
+        this.femaleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/entities/" + femaleTexture + ".png");
         this.scale = scale;
     }
 
