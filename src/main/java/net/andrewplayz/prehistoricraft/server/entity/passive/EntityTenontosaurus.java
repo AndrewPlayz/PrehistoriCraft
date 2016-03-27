@@ -14,6 +14,7 @@ public class EntityTenontosaurus extends EntityPrehistoric {
         this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(3, new EntityAIEatGrass(this));
         this.tasks.addTask(4, new EntityAITempt(this, 1.25D, Items.wheat, false));
+        this.setSize(3.0F, 1.8F);
     }
 
     protected void applyEntityAttributes()

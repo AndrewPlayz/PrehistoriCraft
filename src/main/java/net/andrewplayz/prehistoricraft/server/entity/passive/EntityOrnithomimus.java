@@ -19,6 +19,7 @@ public class EntityOrnithomimus extends EntityPrehistoric {
         this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(3, new EntityAIEatGrass(this));
         this.tasks.addTask(4, new EntityAITempt(this, 1.25D, Items.pumpkin_seeds, false));
+        this.setSize(2.0F, 2.0F);
     }
 
     protected void applyEntityAttributes()

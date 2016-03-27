@@ -7,6 +7,9 @@ import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.passive.EntityAnimal;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
+import org.lwjgl.opengl.GL11;
+
+import java.util.Random;
 
 public class EntityPrehistoric extends EntityCreature {
     //Yet to be implemented
@@ -18,6 +21,8 @@ public class EntityPrehistoric extends EntityCreature {
 
     //Yet to be implemented
     private PermanentPartner partner;
+
+    public float randomMobScale = new Random().nextFloat() + 1;
 
     public EntityPrehistoric(World world) {
         super(world);

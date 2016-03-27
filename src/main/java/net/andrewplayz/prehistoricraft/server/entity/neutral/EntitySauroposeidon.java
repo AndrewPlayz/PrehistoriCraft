@@ -15,6 +15,7 @@ public class EntitySauroposeidon extends EntityPrehistoric{
         this.tasks.addTask(3, new EntityAIEatGrass(this));
         this.tasks.addTask(4, new EntityAITempt(this, 1.25D, Items.wheat, false));
         this.tasks.addTask(5, new EntityAIAttackOnCollide(this, 1.0D, true));
+        this.setSize(15.0F, 10.0F);
     }
 
     protected void applyEntityAttributes()

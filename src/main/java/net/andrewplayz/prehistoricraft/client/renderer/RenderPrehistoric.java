@@ -2,6 +2,7 @@ package net.andrewplayz.prehistoricraft.client.renderer;
 
 import net.andrewplayz.prehistoricraft.PrehistoriCraft;
 import net.andrewplayz.prehistoricraft.server.entity.EntityGender;
+import net.andrewplayz.prehistoricraft.server.entity.EntityPrehistoric;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
@@ -40,6 +41,7 @@ public class RenderPrehistoric<T extends EntityLiving> extends RenderLiving<T> {
 
     @Override
     protected void preRenderCallback(T entity, float partialTick) {
-        GL11.glScalef(scale, scale, scale);
+        EntityPrehistoric prehistoric = (EntityPrehistoric)entity;
+        GL11.glScalef(prehistoric.randomMobScale, prehistoric.randomMobScale, prehistoric.randomMobScale);
     }
 }
