@@ -2,19 +2,18 @@ package net.andrewplayz.prehistoricraft.server.world;
 
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.util.BlockPos;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
-
 import java.util.Random;
 
 public class PrehistoriCraftWorldGen implements IWorldGenerator {
 
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-        switch (world.provider.getDimensionId()) {
+        switch (world.provider.getDimension()) {
             case 0:
                 //Generate the Over World
                 generateSurface(world, random, chunkX * 16, chunkZ * 16);

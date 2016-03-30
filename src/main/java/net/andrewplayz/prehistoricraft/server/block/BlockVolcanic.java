@@ -9,7 +9,6 @@ public class BlockVolcanic extends Block {
 
         this.setHardness(5.0f);
         this.setResistance(30.0f);
-        this.setStepSound(soundTypeMetal);
         this.setCreativeTab(PhCCreativeTabs.prehistoricraftCretaceousTab);
     }
 }

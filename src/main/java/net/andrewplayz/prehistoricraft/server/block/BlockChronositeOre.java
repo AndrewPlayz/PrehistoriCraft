@@ -15,7 +15,6 @@ public class BlockChronositeOre extends Block {
 
         this.setHardness(3.0f);
         this.setResistance(15.0f);
-        this.setStepSound(soundTypeStone);
         this.setCreativeTab(PhCCreativeTabs.prehistoricraftTab);
     }
 

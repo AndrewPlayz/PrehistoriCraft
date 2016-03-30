@@ -20,8 +20,8 @@ public class EntityTenontosaurus extends EntityPrehistoric {
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(40.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
+        //this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(40.0D);
+        //this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.35D);
     }
 
     public EntityTenontosaurus createChild(EntityAgeable ageable)

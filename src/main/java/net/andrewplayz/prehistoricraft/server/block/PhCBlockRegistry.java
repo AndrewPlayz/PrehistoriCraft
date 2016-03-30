@@ -1,6 +1,6 @@
 package net.andrewplayz.prehistoricraft.server.block;
 
-import net.ilexiconn.llibrary.common.content.IContentHandler;
+import net.andrewplayz.prehistoricraft.server.content.IContentHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.registry.GameRegistry;

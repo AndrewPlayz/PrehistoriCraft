@@ -1,7 +1,5 @@
-This mapping 'stable_20' was designed for MC 1.8.8! Use at your own peril.This mapping 'stable_20' was designed for MC 1.8.8! Use at your own peril.
-
 #################################################
-         ForgeGradle 2.1-SNAPSHOT-836d960        
+         ForgeGradle 2.1-SNAPSHOT-2c720a8        
   https://github.com/MinecraftForge/ForgeGradle  
 #################################################
                Powered by MCP unknown               
@@ -11,34 +9,16 @@ This mapping 'stable_20' was designed for MC 1.8.8! Use at your own peril.This m
 #################################################
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
-:getVersionJson
-:extractUserdev UP-TO-DATE
-:extractDependencyATs SKIPPED
-:extractMcpData SKIPPED
-:extractMcpMappings
-:genSrgs SKIPPED
-:downloadClient SKIPPED
-:downloadServer SKIPPED
-:splitServerJar SKIPPED
-:mergeJars SKIPPED
-:deobfMcSRG SKIPPED
-:decompileMc SKIPPED
-:fixMcSources SKIPPED
-:applySourcePatches
-:remapMcSources SKIPPED
-:recompileMc SKIPPED
-:extractNatives SKIPPED
-:getAssetIndex UP-TO-DATE
-:getAssets
-Current status: 288/734   39%
-Current status: 546/734   74%
-:makeStart
-:setupDecompWorkspace
 :ideaModule
+Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.0.0-1.9/llibrary-1.0.0-1.9.pom
+Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.0.0-1.9/llibrary-1.0.0-1.9-dev.jar
+Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.0.0-1.9/llibrary-1.0.0-1.9-sources.jar
+Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.0.0-1.9/llibrary-1.0.0-1.9-javadoc.jar
+Download https://libraries.minecraft.net/com/mojang/authlib/1.5.22/authlib-1.5.22-sources.jar
 :ideaProject
 :ideaWorkspace
 :idea
 
 BUILD SUCCESSFUL
 
-Total time: 1 mins 22.074 secs
+Total time: 51.186 secs

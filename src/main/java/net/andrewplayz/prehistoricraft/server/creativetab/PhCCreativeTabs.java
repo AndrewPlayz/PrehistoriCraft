@@ -1,7 +1,7 @@
 package net.andrewplayz.prehistoricraft.server.creativetab;
 
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
-import net.ilexiconn.llibrary.common.content.IContentHandler;
+import net.andrewplayz.prehistoricraft.server.content.IContentHandler;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.relauncher.Side;

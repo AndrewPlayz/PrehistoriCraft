@@ -25,8 +25,8 @@ public class EntityOrnithomimus extends EntityPrehistoric {
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.46D);
+        //this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(20.0D);
+        //this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.46D);
     }
 
     public EntityOrnithomimus createChild(EntityAgeable ageable)

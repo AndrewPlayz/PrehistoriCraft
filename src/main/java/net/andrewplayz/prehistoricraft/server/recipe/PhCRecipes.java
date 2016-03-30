@@ -2,8 +2,8 @@ package net.andrewplayz.prehistoricraft.server.recipe;
 
 import net.andrewplayz.prehistoricraft.client.FuelHandler;
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
+import net.andrewplayz.prehistoricraft.server.content.IContentHandler;
 import net.andrewplayz.prehistoricraft.server.item.PhCItemRegistry;
-import net.ilexiconn.llibrary.common.content.IContentHandler;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 

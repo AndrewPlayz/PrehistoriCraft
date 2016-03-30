@@ -18,7 +18,6 @@ public class EntityAcrocanthosaurus extends EntityPrehistoric{
     public EntityAcrocanthosaurus(World worldIn){
         super(worldIn);
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 1.0D, false));
         this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));
         this.tasks.addTask(7, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
@@ -29,9 +28,9 @@ public class EntityAcrocanthosaurus extends EntityPrehistoric{
     {
         super.applyEntityAttributes();
         //this.getEntityAttribute(SharedMonsterAttributes.attackDamage).setBaseValue(10.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.followRange).setBaseValue(30.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(60.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20000000298023224D);
+        //this.getEntityAttribute(SharedMonsterAttributes.).setBaseValue(30.0D);
+        //this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(60.0D);
+        //this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.20000000298023224D);
     }
 
     public EntityAcrocanthosaurus createChild(EntityAgeable ageable)
