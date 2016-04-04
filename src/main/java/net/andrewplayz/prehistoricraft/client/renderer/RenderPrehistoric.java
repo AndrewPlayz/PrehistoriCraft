@@ -6,6 +6,7 @@ import net.andrewplayz.prehistoricraft.server.entity.EntityPrehistoric;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderLiving;
+import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
@@ -15,8 +16,8 @@ public class RenderPrehistoric<T extends EntityLiving> extends RenderLiving<T> {
     private ResourceLocation femaleTexture;
     private float scale;
 
-    public RenderPrehistoric(ModelBase model, String maleTexture, String femaleTexture, float shadow, float scale) {
-        super(Minecraft.getMinecraft().getRenderManager(), model, shadow);
+    public RenderPrehistoric(RenderManager manager, ModelBase model, String maleTexture, String femaleTexture, float shadow, float scale) {
+        super(manager, model, shadow);
         this.maleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/entities/" + maleTexture + ".png");
         this.femaleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/entities/" + femaleTexture + ".png");
         this.scale = scale;

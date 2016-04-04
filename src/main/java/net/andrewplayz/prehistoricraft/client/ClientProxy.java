@@ -32,6 +32,14 @@ public class ClientProxy extends ServerProxy implements IRenderFactory {
     public void onPreInit() {
         //3D Rendered Blocks
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLaptopBlock.class, new RenderLaptop());
+
+        //Mobs
+        RenderingRegistry.registerEntityRenderingHandler(EntityAcrocanthosaurus.class, new PrehistoricRenderFactory<EntityAcrocanthosaurus>(new AcrocanthosaurusMale(), "acrocanthosaurusmale", "acrocanthosaurusfemale", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityOrnithomimus.class, new PrehistoricRenderFactory<EntityOrnithomimus>(new OrnithomimusMale(), "ornithomimusmale", "ornithomimusfemale", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityRugocaudia.class, new PrehistoricRenderFactory<EntityRugocaudia>(new RugocaudiaMale(), "rugocaudiamale", "rugocaudiafemale", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySauropelta.class, new PrehistoricRenderFactory<EntitySauropelta>(new SauropeltaMale(), "sauropeltamale", "sauropeltafemale", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySauroposeidon.class, new PrehistoricRenderFactory<EntitySauroposeidon>(new SauroposeidonMale(), "sauroposeidonmale", "sauroposeidonfemale", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityTenontosaurus.class, new PrehistoricRenderFactory<EntityTenontosaurus>(new TenontosaurusMale(), "tenontosaurusmale", "tenontosaurusfemale", 1.0F, 1.0F));
     }
 
     @Override
@@ -40,12 +48,6 @@ public class ClientProxy extends ServerProxy implements IRenderFactory {
         PhCItemRenderer.registerItemRender();
 
         //Mobs Renderer
-        RenderingRegistry.registerEntityRenderingHandler(EntityAcrocanthosaurus.class, new PrehistoricRenderFactory<EntityAcrocanthosaurus>(new AcrocanthosaurusMale(), "acrocanthosaurusmale", "acrocanthosaurusfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityOrnithomimus.class, new PrehistoricRenderFactory<EntityOrnithomimus>(new OrnithomimusMale(), "ornithomimusmale", "ornithomimusfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityRugocaudia.class, new PrehistoricRenderFactory<EntityRugocaudia>(new RugocaudiaMale(), "rugocaudiamale", "rugocaudiafemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySauropelta.class, new PrehistoricRenderFactory<EntitySauropelta>(new SauropeltaMale(), "sauropeltamale", "sauropeltafemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySauroposeidon.class, new PrehistoricRenderFactory<EntitySauroposeidon>(new SauroposeidonMale(), "sauroposeidonmale", "sauroposeidonfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityTenontosaurus.class, new PrehistoricRenderFactory<EntityTenontosaurus>(new TenontosaurusMale(), "tenontosaurusmale", "tenontosaurusfemale", 1.0F, 1.0F));
     }
 
     @Override

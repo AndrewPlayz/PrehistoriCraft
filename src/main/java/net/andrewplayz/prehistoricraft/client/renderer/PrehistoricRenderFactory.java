@@ -23,7 +23,7 @@ public class PrehistoricRenderFactory<E> implements IRenderFactory{
 
     @Override
     public Render createRenderFor(RenderManager manager) {
-        RenderPrehistoric phcrender = new RenderPrehistoric(model, maleTexture, femaleTexture, shadow, scale);
+        RenderPrehistoric phcrender = new RenderPrehistoric(manager, model, maleTexture, femaleTexture, shadow, scale);
         return phcrender;
     }
 }
