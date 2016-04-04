@@ -13,8 +13,12 @@ public class PrehistoricRenderFactory<E> implements IRenderFactory{
     public float shadow;
     public float scale;
 
-
     public PrehistoricRenderFactory(ModelBase model, String maleTexture, String femaleTexture, float shadow, float scale) {
+        this.model = model;
+        this.maleTexture = maleTexture;
+        this.femaleTexture = femaleTexture;
+        this.shadow = shadow;
+        this.scale = scale;
     }
 
     @Override
