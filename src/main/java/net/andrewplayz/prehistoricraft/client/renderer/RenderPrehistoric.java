@@ -15,10 +15,6 @@ public class RenderPrehistoric<T extends EntityLiving> extends RenderLiving<T> {
     private ResourceLocation femaleTexture;
     private float scale;
 
-    public RenderPrehistoric(ModelBase model, String maleTexture, String femaleTexture, float shadow) {
-        this(model, maleTexture, femaleTexture, shadow, 1.0F);
-    }
-
     public RenderPrehistoric(ModelBase model, String maleTexture, String femaleTexture, float shadow, float scale) {
         super(Minecraft.getMinecraft().getRenderManager(), model, shadow);
         this.maleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/entities/" + maleTexture + ".png");
@@ -28,7 +24,7 @@ public class RenderPrehistoric<T extends EntityLiving> extends RenderLiving<T> {
 
     @Override
     protected ResourceLocation getEntityTexture(T entity) {
-        EntityGender gender = EntityGender.getGender(entity);
+        EntityGender gender = EntityPrehistoric.getGender(entity);
         switch (gender) {
             case MALE:
                 return maleTexture;

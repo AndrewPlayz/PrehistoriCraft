@@ -12,6 +12,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class PhCEntityRegistry implements IContentHandler {
+
     @Override
     public void init() {
 
@@ -19,12 +20,12 @@ public class PhCEntityRegistry implements IContentHandler {
 
     @Override
     public void gameRegistry() throws Exception {
-        EntityRegistry.registerModEntity(EntityAcrocanthosaurus.class, "acrocanthosaurus", 100, PrehistoriCraft.instance, 21, 21, true);
-        EntityRegistry.registerModEntity(EntityOrnithomimus.class, "ornithomimus", 101, PrehistoriCraft.instance, 21, 21, true);
-        EntityRegistry.registerModEntity(EntityRugocaudia.class, "rugocaudia", 102, PrehistoriCraft.instance, 21, 21, true);
-        EntityRegistry.registerModEntity(EntitySauropelta.class, "sauropelta", 103, PrehistoriCraft.instance, 21, 21, true);
-        EntityRegistry.registerModEntity(EntitySauroposeidon.class, "sauroposeidon", 104, PrehistoriCraft.instance, 21, 21, true);
-        EntityRegistry.registerModEntity(EntityTenontosaurus.class, "tenontosaurus", 105, PrehistoriCraft.instance, 21, 21, true);
+        EntityRegistry.registerModEntity(EntityAcrocanthosaurus.class, "acrocanthosaurus", 1, PrehistoriCraft.instance, 0x995134, 0x94533A, true);
+        EntityRegistry.registerModEntity(EntityOrnithomimus.class, "ornithomimus", 2, PrehistoriCraft.instance, 0x663300, 0x0073e6, true);
+        EntityRegistry.registerModEntity(EntityRugocaudia.class, "rugocaudia", 3, PrehistoriCraft.instance, 0xf2f2f2, 0x003300, true);
+        EntityRegistry.registerModEntity(EntitySauropelta.class, "sauropelta", 4, PrehistoriCraft.instance, 0x4d2600, 0x804000, true);
+        EntityRegistry.registerModEntity(EntitySauroposeidon.class, "sauroposeidon", 5, PrehistoriCraft.instance, 0x264d00, 0x1a3300, true);
+        EntityRegistry.registerModEntity(EntityTenontosaurus.class, "tenontosaurus", 6, PrehistoriCraft.instance, 0x446600, 0x213300, true);
     }
 
     protected ResourceLocation AnimalTexture;

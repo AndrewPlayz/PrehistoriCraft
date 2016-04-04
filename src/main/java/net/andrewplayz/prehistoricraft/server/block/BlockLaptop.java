@@ -32,7 +32,7 @@ public class BlockLaptop extends BlockContainer {
     }
 
     public boolean isOpaqueCube() {
-        return false;
+        return true;
     }
 
     public TileEntity createNewTileEntity(World world, int var2) {

@@ -1,6 +1,7 @@
 package net.andrewplayz.prehistoricraft.server.entity;
 
 import net.minecraft.entity.EntityCreature;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
@@ -15,26 +16,32 @@ public class EntityPrehistoric extends EntityCreature {
         super(world);
     }
 
-    private static final DataParameter<Boolean> x = EntityDataManager.createKey(EntityPrehistoric.class, DataSerializers.BOOLEAN);
+    private static final DataParameter<Boolean> y = EntityDataManager.createKey(EntityPrehistoric.class, DataSerializers.BOOLEAN);
+    public static final DataParameter<Integer> x = EntityDataManager.createKey(EntityPrehistoric.class, DataSerializers.VARINT);
 
     @Override
-    protected void entityInit() {
+    public void entityInit() {
         super.entityInit();
-        dataWatcher.register(x, false);
+        dataWatcher.register(y, false);
+        this.getDataManager().register(x, 0);
     }
 
     public void writeEntityToNBT(NBTTagCompound compound) {
         super.writeEntityToNBT(compound);
-        getGender().writeToNBT(this, compound);
+        compound.setInteger("Gender", this.getDataManager().get(x));
     }
 
     public void readEntityFromNBT(NBTTagCompound compound) {
         super.readEntityFromNBT(compound);
-        EntityGender.readFromNBT(this, compound);
+        this.getDataManager().set(x, compound.hasKey("Gender") ? compound.getInteger("Gender") : 0);
     }
 
     public EntityGender getGender() {
-        return EntityGender.getGender(this);
+        return this.getDataManager().get(x) == 0 ? EntityGender.FEMALE : EntityGender.MALE;
+    }
+
+    public static <T extends EntityLiving> EntityGender getGender(T entity) {
+        return null;
     }
 }
 
