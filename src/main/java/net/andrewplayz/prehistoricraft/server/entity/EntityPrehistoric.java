@@ -1,16 +1,13 @@
 package net.andrewplayz.prehistoricraft.server.entity;
 
 import net.minecraft.entity.EntityCreature;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
-import java.util.Random;
 
 public class EntityPrehistoric extends EntityCreature {
-    public float randomMobScale = new Random().nextFloat() + 0.3F;
 
     public EntityPrehistoric(World world) {
         super(world);
@@ -38,10 +35,6 @@ public class EntityPrehistoric extends EntityCreature {
 
     public EntityGender getGender() {
         return this.getDataManager().get(x) == 0 ? EntityGender.FEMALE : EntityGender.MALE;
-    }
-
-    public static <T extends EntityLiving> EntityGender getGender(T entity) {
-        return null;
     }
 }
 

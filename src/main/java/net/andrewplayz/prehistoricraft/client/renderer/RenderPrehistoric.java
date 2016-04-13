@@ -3,15 +3,13 @@ package net.andrewplayz.prehistoricraft.client.renderer;
 import net.andrewplayz.prehistoricraft.PrehistoriCraft;
 import net.andrewplayz.prehistoricraft.server.entity.EntityGender;
 import net.andrewplayz.prehistoricraft.server.entity.EntityPrehistoric;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelBase;
+import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.entity.EntityLiving;
 import net.minecraft.util.ResourceLocation;
-import org.lwjgl.opengl.GL11;
 
-public class RenderPrehistoric<T extends EntityLiving> extends RenderLiving<T> {
+public class RenderPrehistoric<T extends EntityPrehistoric> extends RenderLiving<T> {
     private ResourceLocation maleTexture;
     private ResourceLocation femaleTexture;
     private float scale;
@@ -25,7 +23,7 @@ public class RenderPrehistoric<T extends EntityLiving> extends RenderLiving<T> {
 
     @Override
     protected ResourceLocation getEntityTexture(T entity) {
-        EntityGender gender = EntityPrehistoric.getGender(entity);
+        EntityGender gender = entity.getGender();
         switch (gender) {
             case MALE:
                 return maleTexture;
@@ -39,6 +37,6 @@ public class RenderPrehistoric<T extends EntityLiving> extends RenderLiving<T> {
     @Override
     protected void preRenderCallback(T entity, float partialTick) {
         EntityPrehistoric prehistoric = (EntityPrehistoric)entity;
-        GL11.glScalef(prehistoric.randomMobScale, prehistoric.randomMobScale, prehistoric.randomMobScale);
+        GlStateManager.scale(1.0F, 1.0F, 1.0F);
     }
 }
