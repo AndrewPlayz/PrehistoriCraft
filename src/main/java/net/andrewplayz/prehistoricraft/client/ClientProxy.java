@@ -17,7 +17,7 @@ import net.andrewplayz.prehistoricraft.client.renderer.PrehistoricRenderFactory;
 import net.andrewplayz.prehistoricraft.client.renderer.RenderLaptop;
 import net.andrewplayz.prehistoricraft.server.ServerProxy;
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
-import net.andrewplayz.prehistoricraft.server.block.entity.TileEntityLaptopBlock;
+import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityAcrocanthosaurus;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityDaspletosaurus;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityTroodon;
@@ -42,19 +42,19 @@ public class ClientProxy extends ServerProxy implements IRenderFactory {
         ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLaptopBlock.class, new RenderLaptop());
 
         //Mobs
-        RenderingRegistry.registerEntityRenderingHandler(EntityAcrocanthosaurus.class, new PrehistoricRenderFactory<EntityAcrocanthosaurus>(new AcrocanthosaurusMale(), "acrocanthosaurusmale", "acrocanthosaurusfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityOrnithomimus.class, new PrehistoricRenderFactory<EntityOrnithomimus>(new OrnithomimusMale(), "ornithomimusmale", "ornithomimusfemale", 0.1F, 0.1F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityRugocaudia.class, new PrehistoricRenderFactory<EntityRugocaudia>(new RugocaudiaMale(), "rugocaudiamale", "rugocaudiafemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySauropelta.class, new PrehistoricRenderFactory<EntitySauropelta>(new SauropeltaMale(), "sauropeltamale", "sauropeltafemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntitySauroposeidon.class, new PrehistoricRenderFactory<EntitySauroposeidon>(new SauroposeidonMale(), "sauroposeidonmale", "sauroposeidonfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityTenontosaurus.class, new PrehistoricRenderFactory<EntityTenontosaurus>(new TenontosaurusMale(), "tenontosaurusmale", "tenontosaurusfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityAnodontosaurus.class, new PrehistoricRenderFactory<EntityAnodontosaurus>(new AnodontosaurusMale(), "anodontosaurusmale", "anodontosaurusfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityDaspletosaurus.class, new PrehistoricRenderFactory<EntityDaspletosaurus>(new DaspletosaurusMale(), "daspletosaurusmale", "daspletosaurusfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityEdmontonia.class, new PrehistoricRenderFactory<EntityEdmontonia>(new EdmontoniaMale(), "edmontoniamale", "edmontoniafemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityHypacrosaurus.class, new PrehistoricRenderFactory<EntityHypacrosaurus>(new HypacrosaurusMale(), "hypacrosaurusmale", "hypacrosaurusfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityPachyrhinosaurusCanadensis.class, new PrehistoricRenderFactory<EntityPachyrhinosaurusCanadensis>(new PachyrhinosaurusCanadensisMale(), "pachyrhinosauruscanadensismale", "pachyrhinosauruscanadensisfemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityPachyrhinosaurusLakustai.class, new PrehistoricRenderFactory<EntityPachyrhinosaurusLakustai>(new PachyrhinosaurusLakustaiMale(), "pachyrhinosauruslakustaimale", "pachyrhinosauruslakustaifemale", 1.0F, 1.0F));
-        RenderingRegistry.registerEntityRenderingHandler(EntityTroodon.class, new PrehistoricRenderFactory<EntityTroodon>(new TroodonMale(), "troodonmale", "troodonfemale", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityAcrocanthosaurus.class, new PrehistoricRenderFactory<EntityAcrocanthosaurus>(new AcrocanthosaurusMale(), "acrocanthosaurusmale.png", "acrocanthosaurusfemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityOrnithomimus.class, new PrehistoricRenderFactory<EntityOrnithomimus>(new OrnithomimusMale(), "ornithomimusmale.png", "ornithomimusfemale.png", 0.1F, 0.1F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityRugocaudia.class, new PrehistoricRenderFactory<EntityRugocaudia>(new RugocaudiaMale(), "rugocaudiamale.png", "rugocaudiafemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySauropelta.class, new PrehistoricRenderFactory<EntitySauropelta>(new SauropeltaMale(), "sauropeltamale.png", "sauropeltafemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntitySauroposeidon.class, new PrehistoricRenderFactory<EntitySauroposeidon>(new SauroposeidonMale(), "sauroposeidonmale.png", "sauroposeidonfemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityTenontosaurus.class, new PrehistoricRenderFactory<EntityTenontosaurus>(new TenontosaurusMale(), "tenontosaurusmale.png", "tenontosaurusfemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityAnodontosaurus.class, new PrehistoricRenderFactory<EntityAnodontosaurus>(new AnodontosaurusMale(), "anodontosaurusmale.png", "anodontosaurusfemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityDaspletosaurus.class, new PrehistoricRenderFactory<EntityDaspletosaurus>(new DaspletosaurusMale(), "daspletosaurusmale.png", "daspletosaurusfemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityEdmontonia.class, new PrehistoricRenderFactory<EntityEdmontonia>(new EdmontoniaMale(), "edmontoniamale.png", "edmontoniafemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityHypacrosaurus.class, new PrehistoricRenderFactory<EntityHypacrosaurus>(new HypacrosaurusMale(), "hypacrosaurusmale.png", "hypacrosaurusfemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityPachyrhinosaurusCanadensis.class, new PrehistoricRenderFactory<EntityPachyrhinosaurusCanadensis>(new PachyrhinosaurusCanadensisMale(), "pachyrhinosauruscanadensismale.png", "pachyrhinosauruscanadensisfemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityPachyrhinosaurusLakustai.class, new PrehistoricRenderFactory<EntityPachyrhinosaurusLakustai>(new PachyrhinosaurusLakustaiMale(), "pachyrhinosauruslakustaimale.png", "pachyrhinosauruslakustaifemale.png", 1.0F, 1.0F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityTroodon.class, new PrehistoricRenderFactory<EntityTroodon>(new TroodonMale(), "troodonmale.png", "troodonfemale.png", 1.0F, 1.0F));
     }
 
     @Override

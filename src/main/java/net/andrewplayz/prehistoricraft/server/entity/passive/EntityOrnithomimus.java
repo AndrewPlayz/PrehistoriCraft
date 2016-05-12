@@ -8,20 +8,24 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.world.World;
 
 public class EntityOrnithomimus extends EntityPrehistoric {
+
     public EntityOrnithomimus(World worldIn){
         super(worldIn);
         this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
+        this.tasks.addTask(2, new EntityAISwimming(this));
     }
 
-    protected void applyEntityAttributes()
+    public void applyEntityAttributes()
     {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(20.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.46D);
+        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.24D);
+        this.setSize(1.3F, 1.7F);
     }
 
-    public EntityOrnithomimus createChild(EntityAgeable ageable)
+    @Override
+    public boolean canDespawn()
     {
-        return new EntityOrnithomimus(this.worldObj);
+        return false;
     }
 }

@@ -1,5 +1,6 @@
 package net.andrewplayz.prehistoricraft.server.block;
 
+import net.andrewplayz.prehistoricraft.server.block.blocks.*;
 import net.andrewplayz.prehistoricraft.server.content.IContentHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

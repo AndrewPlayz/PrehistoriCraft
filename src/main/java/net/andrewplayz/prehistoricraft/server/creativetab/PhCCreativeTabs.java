@@ -9,7 +9,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class PhCCreativeTabs implements IContentHandler {
     public static CreativeTabs prehistoricraftTab;
-    public static CreativeTabs prehistoricraftQuaternaryTab;
     public static CreativeTabs prehistoricraftCretaceousTab;
 
     @Override
@@ -18,12 +17,6 @@ public class PhCCreativeTabs implements IContentHandler {
             @SideOnly(Side.CLIENT)
             public Item getTabIconItem() {
                 return Item.getItemFromBlock(PhCBlockRegistry.oreChronositeOre);
-            }
-        };
-        prehistoricraftQuaternaryTab = new CreativeTabs("prehistoricraftquaternary") {
-            @SideOnly(Side.CLIENT)
-            public Item getTabIconItem() {
-                return Item.getItemFromBlock(PhCBlockRegistry.blockAluminiumBlock);
             }
         };
         prehistoricraftCretaceousTab = new CreativeTabs("prehistoricraftcretaceous") {

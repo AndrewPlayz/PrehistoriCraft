@@ -2,9 +2,8 @@ package net.andrewplayz.prehistoricraft.client.renderer;
 
 import net.andrewplayz.prehistoricraft.PrehistoriCraft;
 import net.andrewplayz.prehistoricraft.client.model.blocks.ModelLaptop;
-import net.andrewplayz.prehistoricraft.server.block.entity.TileEntityLaptopBlock;
+import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
-import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import org.lwjgl.opengl.GL11;
 

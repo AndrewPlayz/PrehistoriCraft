@@ -20,7 +20,7 @@ public class EntityPrehistoric extends EntityCreature {
     public void entityInit() {
         super.entityInit();
         dataWatcher.register(y, false);
-        this.getDataManager().register(x, 0);
+        this.getDataManager().register(x, 1);
     }
 
     public void writeEntityToNBT(NBTTagCompound compound) {
@@ -34,7 +34,7 @@ public class EntityPrehistoric extends EntityCreature {
     }
 
     public EntityGender getGender() {
-        return this.getDataManager().get(x) == 0 ? EntityGender.FEMALE : EntityGender.MALE;
+        return this.getDataManager().get(x) == 0 ? EntityGender.MALE : EntityGender.FEMALE;
     }
 }
 

@@ -14,13 +14,6 @@ public class RenderPrehistoric<T extends EntityPrehistoric> extends RenderLiving
     private ResourceLocation femaleTexture;
     private float scale;
 
-    public RenderPrehistoric(RenderManager manager, ModelBase model, String maleTexture, String femaleTexture, float shadow, float scale) {
-        super(manager, model, shadow);
-        this.maleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/entities/" + maleTexture + ".png");
-        this.femaleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/entities/" + femaleTexture + ".png");
-        this.scale = scale;
-    }
-
     @Override
     protected ResourceLocation getEntityTexture(T entity) {
         EntityGender gender = entity.getGender();
@@ -32,6 +25,13 @@ public class RenderPrehistoric<T extends EntityPrehistoric> extends RenderLiving
             default:
                 return null;
         }
+    }
+
+    public RenderPrehistoric(RenderManager manager, ModelBase model,String maleTexture, String femaleTexture, float shadow, float scale) {
+        super(manager, model, shadow);
+        this.maleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/entities/" + maleTexture);
+        this.femaleTexture = new ResourceLocation(PrehistoriCraft.MODID, "textures/entities/" + femaleTexture);
+        this.scale = scale;
     }
 
     @Override

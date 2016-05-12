@@ -1,11 +1,11 @@
-package net.andrewplayz.prehistoricraft.server.block;
+package net.andrewplayz.prehistoricraft.server.block.blocks;
 
 import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
-public class BlockChronositeBlock extends Block {
-    public BlockChronositeBlock(Material material) {
+public class BlockAluminiumBlock extends Block {
+    public BlockAluminiumBlock(Material material) {
         super(material);
 
         this.setHardness(5.0f);

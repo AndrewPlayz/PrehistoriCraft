@@ -1,5 +1,6 @@
-package net.andrewplayz.prehistoricraft.server.block;
+package net.andrewplayz.prehistoricraft.server.block.blocks;
 
+import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
 import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabs;
 import net.andrewplayz.prehistoricraft.server.item.PhCItemRegistry;
 import net.minecraft.block.Block;

@@ -1,6 +1,6 @@
-package net.andrewplayz.prehistoricraft.server.block;
+package net.andrewplayz.prehistoricraft.server.block.blocks;
 
-import net.andrewplayz.prehistoricraft.server.block.entity.TileEntityLaptopBlock;
+import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
 import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabs;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;

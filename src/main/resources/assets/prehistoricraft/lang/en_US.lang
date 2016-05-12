@@ -13,15 +13,23 @@ item.itemaluminiumingot.name=Aluminium Ingot
 item.itemchronositedust.name=Chronosite Dust
 item.itemtreetinder.name=Tree Tinder
 
-PrehistoriCraft Entities
-entity.prehistoricraft.rugocaudia.name=Spawn Rugocaudia
-entity.prehistoricraft.sauroposeidon.name=Spawn Sauroposeidon
-entity.prehistoricraft.sauropelta.name=Spawn Sauropelta
-entity.prehistoricraft.acrocanthosaurus.name=Spawn Acrocanthosaurus
-entity.prehistoricraft.tenontosaurus.name=Spawn Tenontosaurus
-entity.prehistoricraft.ornithomimus.name=Spawn Ornithomimus
+PrehistoriCraft Horse Shoe Entities
+entity.prehistoricraft.rugocaudia.name=Rugocaudia [HS]
+entity.prehistoricraft.sauroposeidon.name=Sauroposeidon [HS]
+entity.prehistoricraft.sauropelta.name=Sauropelta [HS]
+entity.prehistoricraft.acrocanthosaurus.name=Acrocanthosaurus [HS]
+entity.prehistoricraft.tenontosaurus.name=Tenontosaurus [HS]
+entity.prehistoricraft.ornithomimus.name=Ornithomimus [HS]
+
+PrehistoriCraft Cloverly Entities
+entity.prehistoricraft.anodontosaurus.name=Anodontosaurus [CL]
+entity.prehistoricraft.daspletosaurus.name=Daspletosaurus [CL]
+entity.prehistoricraft.edmontonia.name=Edmontonia [CL]
+entity.prehistoricraft.hypacrosaurus.name=Hypacrosaurus [CL]
+entity.prehistoricraft.pachyrhinosauruscanadensis.name=Pachyrhinosaurus Canadensis [CL]
+entity.prehistoricraft.pachyrhinosauruslakustai.name=Pachyrhinosaurus Lakustai [CL]
+entity.prehistoricraft.troodon.name=Troodon [CL]
 
 PrehistoriCraft CreativeTabs
 itemGroup.prehistoricraft=PrehistoriCraft OverWorld
-itemGroup.prehistoricraftquaternary=PrehistoriCraft Quaternary
 itemGroup.prehistoricraftcretaceous=PrehistoriCraft Cretaceous

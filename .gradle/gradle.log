@@ -1,5 +1,5 @@
 #################################################
-         ForgeGradle 2.1-SNAPSHOT-2c720a8        
+         ForgeGradle 2.1-SNAPSHOT-da90449        
   https://github.com/MinecraftForge/ForgeGradle  
 #################################################
                Powered by MCP unknown               
@@ -10,15 +10,10 @@
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
 :ideaModule
-Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.0.0-1.9/llibrary-1.0.0-1.9.pom
-Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.0.0-1.9/llibrary-1.0.0-1.9-dev.jar
-Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.0.0-1.9/llibrary-1.0.0-1.9-sources.jar
-Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.0.0-1.9/llibrary-1.0.0-1.9-javadoc.jar
-Download https://libraries.minecraft.net/com/mojang/authlib/1.5.22/authlib-1.5.22-sources.jar
 :ideaProject
 :ideaWorkspace
 :idea
 
 BUILD SUCCESSFUL
 
-Total time: 51.186 secs
+Total time: 47.396 secs

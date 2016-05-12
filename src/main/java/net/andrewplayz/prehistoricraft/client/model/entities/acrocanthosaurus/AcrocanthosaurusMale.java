@@ -4,6 +4,8 @@ import net.ilexiconn.llibrary.client.model.tools.AdvancedModelBase;
 import net.ilexiconn.llibrary.client.model.tools.AdvancedModelRenderer;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import scala.util.Left;
 
 public class AcrocanthosaurusMale extends AdvancedModelBase {
     public AdvancedModelRenderer Mainbody1;
@@ -534,60 +536,51 @@ public class AcrocanthosaurusMale extends AdvancedModelBase {
     }
 
     @Override
-    public void setRotationAngles(float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor, Entity entityIn) {
-        super.setRotationAngles(limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor, entityIn);
+    public void setLivingAnimations(EntityLivingBase entity, float limbSwing, float limbSwingAmount, float partialTicks){
         resetToDefaultPose();
 
-        limbSwing = entityIn.ticksExisted;
-        limbSwingAmount = 0.5F;
+        float globalSpeed = 1.0F;
+        float globalHeight = 1.0F;
+        float globalDegree = 1.0F;
 
-        float globalSpeed = 1;
-        float globalHeight = 1;
-        float globalDegree = 1;
-
-        //Body
-        bob(Mainbody1, 0.5F * globalSpeed, 0.8F * globalHeight, false, limbSwing, limbSwingAmount);
-        bob(Mainbody2, 0.5F * globalSpeed, 0.8F * globalHeight, false, limbSwing, limbSwingAmount);
-
-        //Right Leg
-        walk(Thighright, 0.2F * globalSpeed, 0.5F * globalHeight, false, 0.0F, 0.4F, limbSwing, limbSwingAmount);
-        walk(Upperlegbackright, 0.2F * globalSpeed, 0.5F * globalHeight, false, -1.5F, 0.2F, limbSwing, limbSwingAmount);
-        walk(Upperlegfrontright, 0.2F * globalSpeed, 0.5F * globalHeight, false, -1.5F, 0.2F, limbSwing, limbSwingAmount);
-        walk(Lowerlegright, 0.2F * globalSpeed, 0.5F * globalHeight, false, -1.5F, 0.2F, limbSwing, limbSwingAmount);
-        walk(Heelright, 0.2F * globalSpeed, 0.5F * globalHeight, false, -2.5F, 0.4F, limbSwing, limbSwingAmount);
-        walk(Soleright, 0.2F * globalSpeed, 0.5F * globalHeight, false, -2.5F, 0.4F, limbSwing, limbSwingAmount);
-
-        //Left Leg
-        walk(Thightleft, 0.2F * globalSpeed, 0.5F * globalHeight, true, 0.0F, 0.4F, limbSwing, limbSwingAmount);
-        walk(Upperlegbackleft, 0.2F * globalSpeed, 0.5F * globalHeight, true, -1.5F, 0.5F, limbSwing, limbSwingAmount);
-        walk(Upperlegfrontleft, 0.2F * globalSpeed, 0.5F * globalHeight, true, -1.5F, 0.5F, limbSwing, limbSwingAmount);
-        walk(Lowerlegleft, 0.2F * globalSpeed, 0.5F * globalHeight, true, 4.0F, 0.5F, limbSwing, limbSwingAmount);
-        walk(Heelleft, 0.2F * globalSpeed, 0.5F * globalHeight, true, 8.0F, 0.4F, limbSwing, limbSwingAmount);
-        walk(Soleleft, 0.2F * globalSpeed, 0.5F * globalHeight, true, 8.0F, 0.4F, limbSwing, limbSwingAmount);
-
-        //Right Arm
-        walk(Leftshoulder, 0.1F * globalSpeed, 0.2F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
-
-        //Left Leg
-        walk(Rightshoulder, 0.1F * globalSpeed, 0.2F * globalHeight, false, 0, 0.0F, limbSwing, limbSwingAmount);
-
+        //Idle Animations
         //Neck
-        walk(Neck1, 0.01F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.1F, limbSwing, limbSwingAmount);
-        walk(Neck2, 0.01F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.1F, limbSwing, limbSwingAmount);
-        walk(Neck3, 0.01F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.1F, limbSwing, limbSwingAmount);
+        walk(Neck1, 0.1F, 0.03F * globalHeight, true, 3.0F, 0.0F, entity.ticksExisted, 1);
+        walk(Neck2, 0.1F, 0.03F * globalHeight, true, 3.0F, 0.0F, entity.ticksExisted, 1);
+        walk(Neck3, 0.1F, 0.03F * globalHeight, true, 3.0F, 0.0F, entity.ticksExisted, 1);
 
         //Head
-        walk(Head1, 0.1F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.0F, limbSwing, limbSwingAmount);
-        walk(Jawupper, 0.1F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.0F, limbSwing, limbSwingAmount);
-        walk(Jawlower, 0.1F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.0F, limbSwing, limbSwingAmount);
-        walk(Fronthead1, 0.1F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.0F, limbSwing, limbSwingAmount);
-        walk(Fronthead2, 0.1F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.0F, limbSwing, limbSwingAmount);
+        walk(Head1, 0.1F, 0.0F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+        walk(Jawupper, 0.1F, 0.0F * globalHeight, true, 0.0F, -0.15F, entity.ticksExisted, 1);
+        walk(Jawlower, 0.1F, 0.0F * globalHeight, true, 0.0F, -0.15F, entity.ticksExisted, 1);
 
         //Tail
-        swing(Tail1, 0.15F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
-        swing(Tail2, 0.15F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
-        swing(Tail3, 0.15F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
-        swing(Tail4, 0.15F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
-        swing(Tail5, 0.15F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
+        swing(Tail1, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+        swing(Tail2, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+        swing(Tail3, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+        swing(Tail4, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+        swing(Tail5, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+
+        //Left Arm
+        walk(Leftshoulder, 0.1F, 0.05F * globalHeight, false, 0.5F, 0.0F, entity.ticksExisted, 1);
+        walk(Upperarmleft, 0.1F, 0.05F * globalHeight, false, 0.5F, 0.0F, entity.ticksExisted, 1);
+        walk(Lowerarmleft, 0.1F, 0.05F * globalHeight, false, 0.5F, 0.0F, entity.ticksExisted, 1);
+        walk(Handleft, 0.1F, 0.05F * globalHeight, false, 0.5F, 0.0F, entity.ticksExisted, 1);
+
+        flap(Leftshoulder, 0.1F, 0.04F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
+        flap(Upperarmleft, 0.1F, 0.04F * globalHeight, true, -0.5F, 0.0F, entity.ticksExisted, 1);
+        flap(Lowerarmleft, 0.1F, 0.04F * globalHeight, true, -0.5F, 0.0F, entity.ticksExisted, 1);
+        flap(Handleft, 0.1F, 0.04F * globalHeight, true, -0.5F, 0.0F, entity.ticksExisted, 1);
+
+        //Right Arm
+        walk(Rightshoulder, 0.1F, 0.05F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
+        walk(Upperarmright, 0.1F, 0.05F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
+        walk(Lowerarmright, 0.1F, 0.05F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
+        walk(Handright, 0.1F, 0.05F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
+
+        flap(Rightshoulder, 0.1F, 0.04F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
+        flap(Upperarmright, 0.1F, 0.04F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
+        flap(Lowerarmright, 0.1F, 0.04F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
+        flap(Handright, 0.1F, 0.04F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
     }
 }

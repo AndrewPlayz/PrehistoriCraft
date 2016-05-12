@@ -8,14 +8,21 @@ import net.minecraft.world.World;
 public class EntityTroodon extends EntityPrehistoric{
     public EntityTroodon(World worldIn){
         super(worldIn);
-        this.tasks.addTask(0, new EntityAISwimming(this));
         this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
+        this.tasks.addTask(2, new EntityAISwimming(this));
     }
 
     protected void applyEntityAttributes()
     {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(30.0D);
-        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.226D);
+        this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.24D);
+        this.setSize(1.2F, 1.5F);
+    }
+
+    @Override
+    public boolean canDespawn()
+    {
+        return false;
     }
 }

@@ -1,4 +1,4 @@
-package net.andrewplayz.prehistoricraft.server.block;
+package net.andrewplayz.prehistoricraft.server.block.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
