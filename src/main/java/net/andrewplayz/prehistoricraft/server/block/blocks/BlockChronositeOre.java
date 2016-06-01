@@ -1,8 +1,8 @@
 package net.andrewplayz.prehistoricraft.server.block.blocks;
 
-import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
-import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabs;
-import net.andrewplayz.prehistoricraft.server.item.PhCItemRegistry;
+import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistryHandler;
+import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabHandler;
+import net.andrewplayz.prehistoricraft.server.item.PhCItemHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -16,14 +16,14 @@ public class BlockChronositeOre extends Block {
 
         this.setHardness(3.0f);
         this.setResistance(15.0f);
-        this.setCreativeTab(PhCCreativeTabs.prehistoricraftTab);
+        this.setCreativeTab(PhCCreativeTabHandler.prehistoricraftTab);
     }
 
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return this == PhCBlockRegistry.oreChronositeOre ? PhCItemRegistry.itemChronositeDust : Item.getItemFromBlock(this);
+        return this == PhCBlockRegistryHandler.oreChronositeOre ? PhCItemHandler.itemChronositeDust : Item.getItemFromBlock(this);
     }
 
     public int quantityDropped(Random random) {
-        return this == PhCBlockRegistry.oreChronositeOre ? 1 + random.nextInt(2) : 2;
+        return this == PhCBlockRegistryHandler.oreChronositeOre ? 1 + random.nextInt(2) : 2;
     }
 }

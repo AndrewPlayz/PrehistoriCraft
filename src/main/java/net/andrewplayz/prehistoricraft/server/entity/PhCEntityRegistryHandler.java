@@ -12,7 +12,7 @@ import net.andrewplayz.prehistoricraft.server.entity.passive.EntityTenontosaurus
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
-public class PhCEntityRegistry implements IContentHandler {
+public class PhCEntityRegistryHandler implements IContentHandler {
 
     @Override
     public void init() {

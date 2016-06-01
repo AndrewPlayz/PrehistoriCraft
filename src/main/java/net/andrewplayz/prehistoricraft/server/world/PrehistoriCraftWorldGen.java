@@ -1,6 +1,6 @@
 package net.andrewplayz.prehistoricraft.server.world;
 
-import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
+import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistryHandler;
 import net.minecraft.block.Block;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -14,8 +14,8 @@ public class PrehistoriCraftWorldGen implements IWorldGenerator {
 
     private void generateSurface(World world, Random random, int x, int z) {
         //this.addOreSpawn(PrehistoriCraft.Ore/Block, world, random, blockXPos, blockZPos, maxX, maxZ, maxVeinSize, ChanceToSpawn, minY, MaxY);
-        this.addOreSpawn(PhCBlockRegistry.oreAluminiumOre, world, random, x, z, 16, 16, 3 + random.nextInt(6), 25, 1, 63);
-        this.addOreSpawn(PhCBlockRegistry.oreChronositeOre, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 1, 24);
+        this.addOreSpawn(PhCBlockRegistryHandler.oreAluminiumOre, world, random, x, z, 16, 16, 3 + random.nextInt(6), 25, 1, 63);
+        this.addOreSpawn(PhCBlockRegistryHandler.oreChronositeOre, world, random, x, z, 16, 16, 2 + random.nextInt(4), 10, 1, 24);
 
     }
 

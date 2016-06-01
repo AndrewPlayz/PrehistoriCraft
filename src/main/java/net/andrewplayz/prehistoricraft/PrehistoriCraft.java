@@ -1,12 +1,12 @@
 package net.andrewplayz.prehistoricraft;
 
 import net.andrewplayz.prehistoricraft.server.ServerProxy;
-import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistry;
+import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistryHandler;
 import net.andrewplayz.prehistoricraft.server.content.ContentHelper;
-import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabs;
-import net.andrewplayz.prehistoricraft.server.entity.PhCEntityRegistry;
-import net.andrewplayz.prehistoricraft.server.item.PhCItemRegistry;
-import net.andrewplayz.prehistoricraft.server.recipe.PhCRecipes;
+import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabHandler;
+import net.andrewplayz.prehistoricraft.server.entity.PhCEntityRegistryHandler;
+import net.andrewplayz.prehistoricraft.server.item.PhCItemHandler;
+import net.andrewplayz.prehistoricraft.server.recipe.PhCRecipeHandler;
 import net.andrewplayz.prehistoricraft.server.world.PrehistoriCraftWorldGen;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -28,7 +28,7 @@ public class PrehistoriCraft {
 
     @Mod.EventHandler
     public void onPreInit(FMLPreInitializationEvent event) {
-        ContentHelper.init(new PhCCreativeTabs(), new PhCItemRegistry(), new PhCBlockRegistry(), new PhCRecipes(), new PhCEntityRegistry());
+        ContentHelper.init(new PhCCreativeTabHandler(), new PhCItemHandler(), new PhCBlockRegistryHandler(), new PhCRecipeHandler(), new PhCEntityRegistryHandler());
         proxy.onPreInit();
     }
 

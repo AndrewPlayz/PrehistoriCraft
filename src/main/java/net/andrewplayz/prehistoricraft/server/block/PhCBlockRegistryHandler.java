@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class PhCBlockRegistry implements IContentHandler {
+public class PhCBlockRegistryHandler implements IContentHandler {
     public static Block oreAluminiumOre;
     public static Block oreChronositeOre;
     public static Block blockAluminiumBlock;
@@ -26,7 +26,7 @@ public class PhCBlockRegistry implements IContentHandler {
         blockVolcanicAsh = new BlockVolcanic(Material.snow).setUnlocalizedName("blockvolcanicash");
         blockVolcanicRock = new BlockVolcanic(Material.rock).setUnlocalizedName("blockvolcanicrock");
         blockVolcanicSoil = new BlockVolcanic(Material.grass).setUnlocalizedName("blockvolcanicsoil");
-        blockLaptop = new BlockLaptop(Material.anvil).setUnlocalizedName("blocklaptop");
+        blockLaptop = new BlockLaptop(false, false).setUnlocalizedName("blocklaptop");
     }
 
     @Override

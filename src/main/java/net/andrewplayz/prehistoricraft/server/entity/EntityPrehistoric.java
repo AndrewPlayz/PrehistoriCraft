@@ -7,6 +7,8 @@ import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.world.World;
 
+import java.util.Random;
+
 public class EntityPrehistoric extends EntityCreature {
 
     public EntityPrehistoric(World world) {
@@ -20,7 +22,7 @@ public class EntityPrehistoric extends EntityCreature {
     public void entityInit() {
         super.entityInit();
         dataWatcher.register(y, false);
-        this.getDataManager().register(x, 1);
+        this.getDataManager().register(x, new Random().nextInt(2) - 1);
     }
 
     public void writeEntityToNBT(NBTTagCompound compound) {

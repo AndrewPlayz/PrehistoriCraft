@@ -4,7 +4,7 @@ import net.andrewplayz.prehistoricraft.server.content.IContentHandler;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class PhCItemRegistry implements IContentHandler {
+public class PhCItemHandler implements IContentHandler {
     public static Item itemAluminiumIngot;
     public static Item itemChronositeDust;
     public static Item itemTreeTinder;
