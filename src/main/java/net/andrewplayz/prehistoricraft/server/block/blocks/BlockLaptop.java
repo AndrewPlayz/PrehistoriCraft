@@ -42,11 +42,13 @@ public class BlockLaptop extends BlockContainer
     }
 
     //Drops a block once laptop is broken
+    @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
         return Item.getItemFromBlock(Blocks.cobblestone);
     }
 
+    @Override
     public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state)
     {
         this.setDefaultFacing(worldIn, pos, state);
@@ -109,21 +111,25 @@ public class BlockLaptop extends BlockContainer
         }
     }
 
+    @Override
     public TileEntity createNewTileEntity(World worldIn, int meta)
     {
         return new TileEntityLaptopBlock();
     }
 
+    @Override
     public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
     {
         return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
     }
 
+    @Override
     public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack)
     {
         worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
     }
 
+    @Override
     public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
     {
         if (!keepInventory)
@@ -134,16 +140,19 @@ public class BlockLaptop extends BlockContainer
         super.breakBlock(worldIn, pos, state);
     }
 
+    @Override
     public boolean hasComparatorInputOverride(IBlockState state)
     {
         return true;
     }
 
+    @Override
     public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos)
     {
         return Container.calcRedstone(worldIn.getTileEntity(pos));
     }
 
+    @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
     {
         return new ItemStack(PhCBlockRegistryHandler.blockLaptop);
@@ -154,6 +163,7 @@ public class BlockLaptop extends BlockContainer
         return -1;
     }
 
+    @Override
     public IBlockState getStateFromMeta(int meta)
     {
         EnumFacing enumfacing = EnumFacing.getFront(meta);
@@ -166,31 +176,37 @@ public class BlockLaptop extends BlockContainer
         return this.getDefaultState().withProperty(FACING, enumfacing);
     }
 
+    @Override
     public int getMetaFromState(IBlockState state)
     {
         return ((EnumFacing)state.getValue(FACING)).getIndex();
     }
 
+    @Override
     public IBlockState withRotation(IBlockState state, Rotation rot)
     {
         return state.withProperty(FACING, rot.rotate((EnumFacing)state.getValue(FACING)));
     }
 
+    @Override
     public IBlockState withMirror(IBlockState state, Mirror mirrorIn)
     {
         return state.withRotation(mirrorIn.toRotation((EnumFacing)state.getValue(FACING)));
     }
 
+    @Override
     protected BlockStateContainer createBlockState()
     {
         return new BlockStateContainer(this, new IProperty[] {FACING});
     }
 
+    @Override
     public boolean isOpaqueCube(IBlockState blockstate)
     {
         return false;
     }
 
+    @Override
     public boolean isFullCube(IBlockState blockstate)
     {
         return false;
