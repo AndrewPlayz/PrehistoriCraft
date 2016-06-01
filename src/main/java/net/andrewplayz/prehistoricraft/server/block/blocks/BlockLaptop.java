@@ -41,11 +41,10 @@ public class BlockLaptop extends BlockContainer
         this.hasCrashed = hasCrashed;
     }
 
-    //Drops a block once laptop is broken
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune)
     {
-        return Item.getItemFromBlock(Blocks.cobblestone);
+        return Item.getItemFromBlock(PhCBlockRegistryHandler.blockLaptop);
     }
 
     @Override
@@ -94,11 +93,9 @@ public class BlockLaptop extends BlockContainer
         if (active)
         {
             worldIn.setBlockState(pos, PhCBlockRegistryHandler.blockLaptop.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
-            worldIn.setBlockState(pos, PhCBlockRegistryHandler.blockLaptop.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
         else
         {
-            worldIn.setBlockState(pos, PhCBlockRegistryHandler.blockLaptop.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
             worldIn.setBlockState(pos, PhCBlockRegistryHandler.blockLaptop.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
 
@@ -130,17 +127,6 @@ public class BlockLaptop extends BlockContainer
     }
 
     @Override
-    public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
-    {
-        if (!keepInventory)
-        {
-            TileEntity tileentity = worldIn.getTileEntity(pos);
-        }
-
-        super.breakBlock(worldIn, pos, state);
-    }
-
-    @Override
     public boolean hasComparatorInputOverride(IBlockState state)
     {
         return true;
@@ -156,11 +142,6 @@ public class BlockLaptop extends BlockContainer
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state)
     {
         return new ItemStack(PhCBlockRegistryHandler.blockLaptop);
-    }
-
-    public int getRenderType()
-    {
-        return -1;
     }
 
     @Override
