@@ -14,6 +14,8 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class PhCEntityRegistryHandler implements IContentHandler {
 
+    protected ResourceLocation AnimalTexture;
+
     @Override
     public void init() {
 
@@ -35,6 +37,4 @@ public class PhCEntityRegistryHandler implements IContentHandler {
         EntityRegistry.registerModEntity(EntityPachyrhinosaurusLakustai.class, "pachyrhinosauruslakustai", 12, PrehistoriCraft.instance, 1024, 1, true, 0x96602A, 0x872518);
         EntityRegistry.registerModEntity(EntityTroodon.class, "troodon", 13, PrehistoriCraft.instance, 1024, 1, true, 0x4D4D61, 0xE3E3E3);
     }
-
-    protected ResourceLocation AnimalTexture;
 }

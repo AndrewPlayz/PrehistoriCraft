@@ -607,7 +607,7 @@ public class AnodontosaurusMale extends AdvancedModelBase {
     }
 
     @Override
-    public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) { 
+    public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         this.Lshoulder.render(f5);
         this.Rhip.render(f5);
         this.Bodyfront.render(f5);

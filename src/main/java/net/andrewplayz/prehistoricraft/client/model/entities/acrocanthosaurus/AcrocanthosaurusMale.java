@@ -5,7 +5,6 @@ import net.ilexiconn.llibrary.client.model.tools.AdvancedModelRenderer;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
-import scala.util.Left;
 
 public class AcrocanthosaurusMale extends AdvancedModelBase {
     public AdvancedModelRenderer Mainbody1;
@@ -523,7 +522,7 @@ public class AcrocanthosaurusMale extends AdvancedModelBase {
     }
 
     @Override
-    public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) { 
+    public void render(Entity entity, float f, float f1, float f2, float f3, float f4, float f5) {
         this.Thightleft.render(f5);
         this.Thighright.render(f5);
         this.Mainbody1.render(f5);
@@ -536,7 +535,7 @@ public class AcrocanthosaurusMale extends AdvancedModelBase {
     }
 
     @Override
-    public void setLivingAnimations(EntityLivingBase entity, float limbSwing, float limbSwingAmount, float partialTicks){
+    public void setLivingAnimations(EntityLivingBase entity, float limbSwing, float limbSwingAmount, float partialTicks) {
         resetToDefaultPose();
 
         float globalSpeed = 1.0F;
