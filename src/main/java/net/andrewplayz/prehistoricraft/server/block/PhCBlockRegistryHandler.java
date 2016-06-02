@@ -1,6 +1,7 @@
 package net.andrewplayz.prehistoricraft.server.block;
 
 import net.andrewplayz.prehistoricraft.server.block.blocks.*;
+import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
 import net.andrewplayz.prehistoricraft.server.content.IContentHandler;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -19,13 +20,13 @@ public class PhCBlockRegistryHandler implements IContentHandler {
 
     @Override
     public void init() {
-        oreAluminiumOre = new BlockAluminiumOre(Material.rock).setUnlocalizedName("blockaluminiumore");
-        oreChronositeOre = new BlockChronositeOre(Material.rock).setUnlocalizedName("blockchronositeore");
-        blockAluminiumBlock = new BlockAluminiumBlock(Material.iron).setUnlocalizedName("blockaluminiumblock");
-        blockChronositeBlock = new BlockChronositeBlock(Material.iron).setUnlocalizedName("blockchronositeblock");
-        blockVolcanicAsh = new BlockVolcanic(Material.snow).setUnlocalizedName("blockvolcanicash");
-        blockVolcanicRock = new BlockVolcanic(Material.rock).setUnlocalizedName("blockvolcanicrock");
-        blockVolcanicSoil = new BlockVolcanic(Material.grass).setUnlocalizedName("blockvolcanicsoil");
+        oreAluminiumOre = new BlockAluminiumOre(Material.ROCK).setUnlocalizedName("blockaluminiumore");
+        oreChronositeOre = new BlockChronositeOre(Material.ROCK).setUnlocalizedName("blockchronositeore");
+        blockAluminiumBlock = new BlockAluminiumBlock(Material.IRON).setUnlocalizedName("blockaluminiumblock");
+        blockChronositeBlock = new BlockChronositeBlock(Material.IRON).setUnlocalizedName("blockchronositeblock");
+        blockVolcanicAsh = new BlockVolcanic(Material.SNOW).setUnlocalizedName("blockvolcanicash");
+        blockVolcanicRock = new BlockVolcanic(Material.ROCK).setUnlocalizedName("blockvolcanicrock");
+        blockVolcanicSoil = new BlockVolcanic(Material.GRASS).setUnlocalizedName("blockvolcanicsoil");
         blockLaptop = new BlockLaptop(false, false).setUnlocalizedName("blocklaptop");
     }
 
@@ -39,5 +40,6 @@ public class PhCBlockRegistryHandler implements IContentHandler {
         GameRegistry.registerBlock(blockVolcanicRock, "blockvolcanicrock");
         GameRegistry.registerBlock(blockVolcanicSoil, "blockvolcanicsoil");
         GameRegistry.registerBlock(blockLaptop, "blocklaptop");
+        GameRegistry.registerTileEntity(TileEntityLaptopBlock.class, "entitylaptop");
     }
 }

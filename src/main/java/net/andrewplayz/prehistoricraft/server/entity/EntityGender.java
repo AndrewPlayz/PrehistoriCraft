@@ -1,5 +1,5 @@
 package net.andrewplayz.prehistoricraft.server.entity;
 
-public enum EntityGender{
+public enum EntityGender {
     MALE, FEMALE
 }

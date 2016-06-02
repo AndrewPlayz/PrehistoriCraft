@@ -11,17 +11,16 @@ import java.util.Random;
 
 public class EntityPrehistoric extends EntityCreature {
 
+    public static final DataParameter<Integer> x = EntityDataManager.createKey(EntityPrehistoric.class, DataSerializers.VARINT);
+    private static final DataParameter<Boolean> y = EntityDataManager.createKey(EntityPrehistoric.class, DataSerializers.BOOLEAN);
     public EntityPrehistoric(World world) {
         super(world);
     }
 
-    private static final DataParameter<Boolean> y = EntityDataManager.createKey(EntityPrehistoric.class, DataSerializers.BOOLEAN);
-    public static final DataParameter<Integer> x = EntityDataManager.createKey(EntityPrehistoric.class, DataSerializers.VARINT);
-
     @Override
     public void entityInit() {
         super.entityInit();
-        dataWatcher.register(y, false);
+        this.getDataManager().register(y, false);
         this.getDataManager().register(x, new Random().nextInt(2) - 1);
     }
 
