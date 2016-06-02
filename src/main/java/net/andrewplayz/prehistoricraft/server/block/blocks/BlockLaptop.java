@@ -1,8 +1,6 @@
 package net.andrewplayz.prehistoricraft.server.block.blocks;
 
 import java.util.Random;
-
-import net.andrewplayz.prehistoricraft.PrehistoriCraft;
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistryHandler;
 import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
 import net.minecraft.block.BlockContainer;
@@ -15,11 +13,9 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;

@@ -1,4 +1,3 @@
-//PrehistoriCraft
 buildscript {
     repositories {
         mavenCentral()
@@ -12,22 +11,22 @@ buildscript {
         }
     }
     dependencies {
-        classpath "net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT"
+        classpath "net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT"
     }
 }
 
 apply plugin: "net.minecraftforge.gradle.forge"
 
-version = getVersion("VERSION") + "-1.9"
+version = getVersion("VERSION") + "-1.9.4"
 def llibrary_version = getVersion("LLIBRARY_VERSION")
 group = "net.andrewplayz"
 archivesBaseName = "prehistoricraft"
-sourceCompatibility = targetCompatibility = "1.7"
+sourceCompatibility = targetCompatibility = "1.8"
 
 minecraft {
-    version = "1.9-12.16.0.1824-1.9"
+    version = "1.9.4-12.17.0.1940"
     runDir = "minecraft"
-    mappings = "snapshot_20160312"
+    mappings = "snapshot_20160518"
 }
 
 repositories {
@@ -50,7 +49,7 @@ processResources {
         include "mcmod.info"
         expand "version": project.version, "mcversion": project.minecraft.version, "llibrary_version": llibrary_version
     }
-        
+
     from (sourceSets.main.resources.srcDirs) {
         exclude "mcmod.info"
     }
