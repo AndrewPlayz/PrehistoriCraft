@@ -7,6 +7,7 @@ import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopB
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 
 public class RenderLaptop extends TileEntitySpecialRenderer<TileEntityLaptopBlock> {
     private static final ResourceLocation texture = new ResourceLocation(PrehistoriCraft.MODID + ":" + "textures/blocks/blocklaptopinactive.png");
@@ -16,7 +17,6 @@ public class RenderLaptop extends TileEntitySpecialRenderer<TileEntityLaptopBloc
         this.model = new ModelLaptop();
     }
 
-<<<<<<< HEAD
     private float getRotation(TileEntityLaptopBlock tile) {
         switch(tile.getBlockMetadata()){
             default: return 90;
@@ -34,17 +34,5 @@ public class RenderLaptop extends TileEntitySpecialRenderer<TileEntityLaptopBloc
         GL11.glRotatef(180, 0F, 0F, 1F);
         GL11.glRotatef(this.getRotation(tileentity), 0.0F, 2.0F, 0.0F);
         GL11.glPushMatrix();
-=======
-    @Override
-    public void renderTileEntityAt(TileEntityLaptopBlock laptopBlock, double x, double y, double z, float u, int v) {
-        GlStateManager.pushMatrix();
-        GlStateManager.translate(0f, 0f, 0f);
-        GlStateManager.translate((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
-        GlStateManager.rotate(180, 0F, 0F, 1F);
-        GlStateManager.rotate(laptopBlock.getWorld().getBlockState(laptopBlock.getPos()).getValue(BlockLaptop.FACING).getHorizontalIndex() * 90, 0, 1, 0);
->>>>>>> 08163be334d21fa09d1e96be939a002298aa4038
-        this.bindTexture(texture);
-        this.model.render(null, 0, 0, 0, 0, 0, 0.0625F);
-        GlStateManager.popMatrix();
     }
 }

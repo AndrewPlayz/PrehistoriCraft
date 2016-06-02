@@ -1,5 +1,5 @@
 #################################################
-         ForgeGradle 2.1-SNAPSHOT-da90449        
+         ForgeGradle 2.2-SNAPSHOT-59f33ec        
   https://github.com/MinecraftForge/ForgeGradle  
 #################################################
                Powered by MCP unknown               
@@ -9,11 +9,64 @@
 #################################################
 :deobfCompileDummyTask
 :deobfProvidedDummyTask
+:getVersionJson
+:extractUserdev
+Download http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.9.4-12.17.0.1940/forge-1.9.4-12.17.0.1940.pom
+Download http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.9.4-12.17.0.1940/forge-1.9.4-12.17.0.1940-userdev.jar
+:extractDependencyATs SKIPPED
+:extractMcpData
+Download http://files.minecraftforge.net/maven/de/oceanlabs/mcp/mcp/1.9.4/mcp-1.9.4-srg.zip
+:extractMcpMappings
+Download http://files.minecraftforge.net/maven/de/oceanlabs/mcp/mcp_snapshot/20160518-1.9.4/mcp_snapshot-20160518-1.9.4.zip
+:genSrgs
+:downloadClient
+:downloadServer
+:splitServerJar
+:mergeJars
+:deobfMcSRG
+Applying SpecialSource...
+Applying Exceptor...
+:decompileMc
+Download https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.pom
+Download https://libraries.minecraft.net/com/mojang/realms/1.8.19/realms-1.8.19.pom
+Download https://libraries.minecraft.net/it/unimi/dsi/fastutil/7.0.12_mojang/fastutil-7.0.12_mojang.pom
+Download https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar
+Download https://libraries.minecraft.net/com/mojang/realms/1.8.19/realms-1.8.19.jar
+Download https://libraries.minecraft.net/it/unimi/dsi/fastutil/7.0.12_mojang/fastutil-7.0.12_mojang.jar
+:fixMcSources
+:applySourcePatches
+:remapMcSources
+:recompileMc
+:extractNatives
+:getAssetIndex UP-TO-DATE
+:getAssets
+Current status: 63/1049   6%
+Current status: 115/1049   10%
+Current status: 153/1049   14%
+Current status: 190/1049   18%
+Current status: 244/1049   23%
+Current status: 277/1049   26%
+Current status: 313/1049   29%
+Current status: 376/1049   35%
+Current status: 423/1049   40%
+Current status: 492/1049   46%
+Current status: 544/1049   51%
+Current status: 608/1049   57%
+Current status: 664/1049   63%
+Current status: 738/1049   70%
+Current status: 829/1049   79%
+Current status: 896/1049   85%
+Current status: 954/1049   90%
+:makeStart
+:setupDecompWorkspace
 :ideaModule
+Download https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-sources.jar
+Download https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1-javadoc.jar
+Download https://libraries.minecraft.net/it/unimi/dsi/fastutil/7.0.12_mojang/fastutil-7.0.12_mojang-sources.jar
 :ideaProject
 :ideaWorkspace
 :idea
 
 BUILD SUCCESSFUL
 
-Total time: 47.396 secs
+Total time: 8 mins 54.553 secs

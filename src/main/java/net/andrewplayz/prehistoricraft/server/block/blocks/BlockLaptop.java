@@ -1,9 +1,6 @@
 package net.andrewplayz.prehistoricraft.server.block.blocks;
 
-<<<<<<< HEAD
 import java.util.Random;
-=======
->>>>>>> 08163be334d21fa09d1e96be939a002298aa4038
 import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistryHandler;
 import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
 import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabHandler;
@@ -34,7 +31,7 @@ public class BlockLaptop extends BlockContainer {
     private final boolean hasCrashed;
 
     public BlockLaptop(boolean isActive, boolean hasCrashed) {
-        super(Material.ROCK);
+        super(Material.IRON);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.isActive = isActive;
         this.hasCrashed = hasCrashed;
