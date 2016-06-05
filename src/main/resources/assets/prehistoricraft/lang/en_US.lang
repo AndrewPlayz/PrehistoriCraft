@@ -1,17 +1,17 @@
 PrehistoriCraft Blocks
-tile.blockaluminiumore.name=Aluminium Ore
-tile.blockchronositeore.name=Chronosite Ore
-tile.blockaluminiumblock.name=Aluminium Block
-tile.blockchronositeblock.name=Chronosite Block
-tile.blocklaptop.name=Laptop
-tile.blockVolcanicAsh.name=Volcanic Ash
-tile.blockVolcanicRock.name=Volcanic Rock
-tile.blockVolcanicSoil.name=Volcanic Soil
+tile.prehistoricraft.block_aluminium_ore_block.name=Aluminium Ore
+tile.prehistoricraft.block_chronosite_ore_block.name=Chronosite Ore
+tile.prehistoricraft.block_aluminium_block.name=Aluminium Block
+tile.prehistoricraft.block_chronosite_block.name=Chronosite Block
+tile.prehistoricraft.block_laptop_block.name=Laptop
+tile.prehistoricraft.block_volcanic_ash_block.name=Volcanic Ash
+tile.prehistoricraft.block_volcanic_rock_block.name=Volcanic Rock
+tile.prehistoricraft.block_volcanic_soil_block.name=Volcanic Soil
 
 PrehistoriCraft Items
-item.itemaluminiumingot.name=Aluminium Ingot
-item.itemchronositedust.name=Chronosite Dust
-item.itemtreetinder.name=Tree Tinder
+item.prehistoricraft.item_aluminium_ingot.name=Aluminium Ingot
+item.prehistoricraft.item_aluminium_nugget.name=Aluminium Nugget
+item.prehistoricraft.item_chronosite_dust.name=Chronosite Dust
 
 PrehistoriCraft Horse Shoe Entities
 entity.prehistoricraft.rugocaudia.name=Rugocaudia [HS]
@@ -31,5 +31,5 @@ entity.prehistoricraft.pachyrhinosauruslakustai.name=Pachyrhinosaurus Lakustai [
 entity.prehistoricraft.troodon.name=Troodon [CL]
 
 PrehistoriCraft CreativeTabs
-itemGroup.prehistoricraft=PrehistoriCraft OverWorld
-itemGroup.prehistoricraftcretaceous=PrehistoriCraft Cretaceous
+itemGroup.creativetab_prehistoricraft_main=PrehistoriCraft OverWorld
+itemGroup.creativetab_prehistoricraft_cretaceous=PrehistoriCraft Cretaceous

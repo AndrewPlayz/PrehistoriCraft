@@ -16,12 +16,12 @@ public class PhCItems {
 
     public static void init() {
         //Ingots
-        item_aluminium_ingot = new ItemIngots().setUnlocalizedName("item_aluminium_ingot");
+        item_aluminium_ingot = new ItemIngots("item_aluminium_ingot");
 
         //Nuggets
-        item_aluminium_nugget = new ItemDusts().setUnlocalizedName("item_aluminium_nugget");
+        item_aluminium_nugget = new ItemDusts("item_aluminium_nugget");
 
         //Dusts
-        item_chronosite_dust = new ItemDusts().setUnlocalizedName("item_chronosite_dust");
+        item_chronosite_dust = new ItemDusts("item_chronosite_dust");
     }
 }

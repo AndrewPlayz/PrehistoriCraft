@@ -27,12 +27,12 @@ public class RenderLaptop extends TileEntitySpecialRenderer<TileEntityLaptopBloc
     }
 
     @Override
-    public void renderTileEntityAt(TileEntityLaptopBlock laptopBlock, double x, double y, double z, float u, int v) {
+    public void renderTileEntityAt(TileEntityLaptopBlock block_laptop_block, double x, double y, double z, float u, int v) {
         GlStateManager.pushMatrix();
         GlStateManager.translate(0f, 0f, 0f);
         GlStateManager.translate((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
         GlStateManager.rotate(180, 0F, 0F, 1F);
-        GlStateManager.rotate(laptopBlock.getWorld().getBlockState(laptopBlock.getPos()).getValue(BlockLaptop.FACING).getHorizontalIndex() * 90, 0, 1, 0);
+        GlStateManager.rotate(block_laptop_block.getWorld().getBlockState(block_laptop_block.getPos()).getValue(BlockLaptop.FACING).getHorizontalIndex() * 90, 0, 1, 0);
         this.bindTexture(texture);
         this.model.render(null, 0, 0, 0, 0, 0, 0.0625F);
         GlStateManager.popMatrix();

@@ -1,6 +1,8 @@
 package net.andrewplayz.prehistoricraft.server.block.blocks;
 
 import java.util.Random;
+
+import net.andrewplayz.prehistoricraft.PrehistoriCraft;
 import net.andrewplayz.prehistoricraft.server.core.PhCBlocks;
 import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
 import net.andrewplayz.prehistoricraft.server.core.PhCCreativeTabs;
@@ -21,6 +23,7 @@ import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class BlockLaptop extends BlockContainer {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
@@ -28,12 +31,15 @@ public class BlockLaptop extends BlockContainer {
     private final boolean isActive;
     private final boolean hasCrashed;
 
-    public BlockLaptop(boolean isActive, boolean hasCrashed) {
+    public BlockLaptop(boolean isActive, boolean hasCrashed, String name) {
         super(Material.IRON);
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.isActive = isActive;
         this.hasCrashed = hasCrashed;
         this.setCreativeTab(PhCCreativeTabs.creativetab_prehistoricraft_main);
+        this.setUnlocalizedName("prehistoricraft." + name);
+        GameRegistry.registerBlock(this, name);
+        PrehistoriCraft.PROXY.addItemRender(Item.getItemFromBlock(this), name);
     }
 
     @Override
