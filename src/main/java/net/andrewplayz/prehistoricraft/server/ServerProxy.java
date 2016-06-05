@@ -1,5 +1,7 @@
 package net.andrewplayz.prehistoricraft.server;
 
+import net.minecraft.item.Item;
+
 public class ServerProxy {
     public void onPreInit() {
 
@@ -11,5 +13,8 @@ public class ServerProxy {
 
     public void onPostInit() {
 
+    }
+
+    public void addItemRender(Item item, String name) {
     }
 }

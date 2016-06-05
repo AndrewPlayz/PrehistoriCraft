@@ -1,9 +1,9 @@
 package net.andrewplayz.prehistoricraft.server.block.blocks;
 
 import java.util.Random;
-import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistryHandler;
+import net.andrewplayz.prehistoricraft.server.core.PhCBlocks;
 import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
-import net.andrewplayz.prehistoricraft.server.creativetab.PhCCreativeTabHandler;
+import net.andrewplayz.prehistoricraft.server.core.PhCCreativeTabs;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.material.Material;
@@ -22,8 +22,6 @@ import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-import java.util.Random;
-
 public class BlockLaptop extends BlockContainer {
     public static final PropertyDirection FACING = BlockHorizontal.FACING;
     private static boolean keepInventory;
@@ -35,7 +33,7 @@ public class BlockLaptop extends BlockContainer {
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
         this.isActive = isActive;
         this.hasCrashed = hasCrashed;
-        this.setCreativeTab(PhCCreativeTabHandler.prehistoricraftTab);
+        this.setCreativeTab(PhCCreativeTabs.creativetab_prehistoricraft_main);
     }
 
     @Override
@@ -106,7 +104,7 @@ public class BlockLaptop extends BlockContainer {
 
     @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
-        return new ItemStack(PhCBlockRegistryHandler.blockLaptop);
+        return new ItemStack(PhCBlocks.block_laptop_block);
     }
 
     @Override

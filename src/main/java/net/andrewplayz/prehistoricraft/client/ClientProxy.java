@@ -16,7 +16,6 @@ import net.andrewplayz.prehistoricraft.client.model.entities.troodon.TroodonMale
 import net.andrewplayz.prehistoricraft.client.renderer.PrehistoricRenderFactory;
 import net.andrewplayz.prehistoricraft.client.renderer.RenderLaptop;
 import net.andrewplayz.prehistoricraft.server.ServerProxy;
-import net.andrewplayz.prehistoricraft.server.block.PhCBlockRegistryHandler;
 import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityAcrocanthosaurus;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityDaspletosaurus;
@@ -25,17 +24,13 @@ import net.andrewplayz.prehistoricraft.server.entity.neutral.*;
 import net.andrewplayz.prehistoricraft.server.entity.passive.EntityHypacrosaurus;
 import net.andrewplayz.prehistoricraft.server.entity.passive.EntityOrnithomimus;
 import net.andrewplayz.prehistoricraft.server.entity.passive.EntityTenontosaurus;
-import net.andrewplayz.prehistoricraft.server.item.PhCItemRenderer;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
-public class ClientProxy extends ServerProxy implements IRenderFactory {
+public class ClientProxy extends ServerProxy {
     @Override
     public void onPreInit() {
         //3D Rendered Blocks
@@ -59,25 +54,15 @@ public class ClientProxy extends ServerProxy implements IRenderFactory {
 
     @Override
     public void onInit() {
-        //Items Renderer
-        PhCItemRenderer.registerItemRender();
+
     }
 
     @Override
     public void onPostInit() {
-        //Block Renderer
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistryHandler.oreAluminiumOre), 0, new ModelResourceLocation("prehistoricraft:blockaluminiumore", "inventory"));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistryHandler.oreChronositeOre), 0, new ModelResourceLocation("prehistoricraft:blockchronositeore", "inventory"));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistryHandler.blockAluminiumBlock), 0, new ModelResourceLocation("prehistoricraft:blockaluminiumblock", "inventory"));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistryHandler.blockChronositeBlock), 0, new ModelResourceLocation("prehistoricraft:blockchronositeblock", "inventory"));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistryHandler.blockVolcanicAsh), 0, new ModelResourceLocation("prehistoricraft:blockvolcanicash", "inventory"));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistryHandler.blockVolcanicRock), 0, new ModelResourceLocation("prehistoricraft:blockvolcanicrock", "inventory"));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistryHandler.blockVolcanicSoil), 0, new ModelResourceLocation("prehistoricraft:blockvolcanicsoil", "inventory"));
-        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(PhCBlockRegistryHandler.blockLaptop), 0, new ModelResourceLocation("prehistoricraft:blocklaptop", "inventory"));
+
     }
 
-    @Override
-    public Render createRenderFor(RenderManager manager) {
-        return null;
+    public void addItemRender(Item item, String name) {
+        ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation("prehistoricraft:" + name));
     }
 }

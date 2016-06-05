@@ -1,0 +1,6 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+      "all": "prehistoricraft:blocks/block_laptop_block"
+  }
+}
