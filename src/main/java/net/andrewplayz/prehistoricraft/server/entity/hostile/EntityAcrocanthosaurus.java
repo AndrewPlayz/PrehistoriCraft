@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 
 public class EntityAcrocanthosaurus extends EntityPrehistoric {
 
-    public EntityAcrocanthosaurus(World worldIn) {
+    public EntityAcrocanthosaurus(World worldIn, String male, String female) {
         super(worldIn);
         //this.tasks.addTask(0, new EntityAISwimming(this));
         //this.tasks.addTask(5, new EntityAIMoveTowardsRestriction(this, 1.0D));

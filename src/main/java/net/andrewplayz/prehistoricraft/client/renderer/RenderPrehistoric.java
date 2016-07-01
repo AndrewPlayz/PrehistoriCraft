@@ -1,7 +1,6 @@
 package net.andrewplayz.prehistoricraft.client.renderer;
 
 import net.andrewplayz.prehistoricraft.PrehistoriCraft;
-import net.andrewplayz.prehistoricraft.server.entity.EntityGender;
 import net.andrewplayz.prehistoricraft.server.entity.EntityPrehistoric;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.GlStateManager;
@@ -23,7 +22,7 @@ public class RenderPrehistoric<T extends EntityPrehistoric> extends RenderLiving
 
     @Override
     protected ResourceLocation getEntityTexture(T entity) {
-        EntityGender gender = entity.getGender();
+        EntityPrehistoric.EntityGender gender = entity.getGender();
         switch (gender) {
             case MALE:
                 return maleTexture;

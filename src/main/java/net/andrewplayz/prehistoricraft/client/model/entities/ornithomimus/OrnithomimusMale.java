@@ -381,7 +381,7 @@ public class OrnithomimusMale extends AdvancedModelBase {
         resetToDefaultPose();
 
         /*
-        limbSwing = tileentity.ticksExisted;
+        limbSwing = entity.ticksExisted;
         limbSwingAmount = 0.5F;
         */
 

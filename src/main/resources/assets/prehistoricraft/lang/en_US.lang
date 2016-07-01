@@ -13,22 +13,22 @@ item.prehistoricraft.item_aluminium_ingot.name=Aluminium Ingot
 item.prehistoricraft.item_aluminium_nugget.name=Aluminium Nugget
 item.prehistoricraft.item_chronosite_dust.name=Chronosite Dust
 
-PrehistoriCraft Horse Shoe Entities
-entity.prehistoricraft.rugocaudia.name=Rugocaudia [HS]
-entity.prehistoricraft.sauroposeidon.name=Sauroposeidon [HS]
-entity.prehistoricraft.sauropelta.name=Sauropelta [HS]
-entity.prehistoricraft.acrocanthosaurus.name=Acrocanthosaurus [HS]
-entity.prehistoricraft.tenontosaurus.name=Tenontosaurus [HS]
-entity.prehistoricraft.ornithomimus.name=Ornithomimus [HS]
-
 PrehistoriCraft Cloverly Entities
-entity.prehistoricraft.anodontosaurus.name=Anodontosaurus [CL]
-entity.prehistoricraft.daspletosaurus.name=Daspletosaurus [CL]
-entity.prehistoricraft.edmontonia.name=Edmontonia [CL]
-entity.prehistoricraft.hypacrosaurus.name=Hypacrosaurus [CL]
-entity.prehistoricraft.pachyrhinosauruscanadensis.name=Pachyrhinosaurus Canadensis [CL]
-entity.prehistoricraft.pachyrhinosauruslakustai.name=Pachyrhinosaurus Lakustai [CL]
-entity.prehistoricraft.troodon.name=Troodon [CL]
+entity.prehistoricraft.rugocaudia.name=Rugocaudia [CL]
+entity.prehistoricraft.sauroposeidon.name=Sauroposeidon [CL]
+entity.prehistoricraft.sauropelta.name=Sauropelta [CL]
+entity.prehistoricraft.acrocanthosaurus.name=Acrocanthosaurus [CL]
+entity.prehistoricraft.tenontosaurus.name=Tenontosaurus [CL]
+entity.prehistoricraft.ornithomimus.name=Ornithomimus [CL]
+
+PrehistoriCraft Horse Shoe Entities
+entity.prehistoricraft.anodontosaurus.name=Anodontosaurus [HS]
+entity.prehistoricraft.daspletosaurus.name=Daspletosaurus [HS]
+entity.prehistoricraft.edmontonia.name=Edmontonia [HS]
+entity.prehistoricraft.hypacrosaurus.name=Hypacrosaurus [HS]
+entity.prehistoricraft.pachyrhinosauruscanadensis.name=Pachyrhinosaurus Canadensis [HS]
+entity.prehistoricraft.pachyrhinosauruslakustai.name=Pachyrhinosaurus Lakustai [HS]
+entity.prehistoricraft.troodon.name=Troodon [HS]
 
 PrehistoriCraft CreativeTabs
 itemGroup.creativetab_prehistoricraft_main=PrehistoriCraft OverWorld

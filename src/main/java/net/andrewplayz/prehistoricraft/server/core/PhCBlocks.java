@@ -1,7 +1,9 @@
 package net.andrewplayz.prehistoricraft.server.core;
 
 import net.andrewplayz.prehistoricraft.server.block.blocks.*;
+import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
 import net.minecraft.block.Block;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class PhCBlocks {
     //Metal Blocks
@@ -36,5 +38,7 @@ public class PhCBlocks {
 
         //Cusomt Rendered in Blocks
         block_laptop_block = new BlockLaptop(false, false, "block_laptop_block");
+
+        GameRegistry.registerTileEntity(TileEntityLaptopBlock.class, "entitylaptop");
     }
 }

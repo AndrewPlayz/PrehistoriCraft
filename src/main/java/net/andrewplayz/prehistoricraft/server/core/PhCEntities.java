@@ -12,9 +12,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
 public class PhCEntities{
-
-    protected ResourceLocation AnimalTexture;
-
     public static void init() {
         EntityRegistry.registerModEntity(EntityAcrocanthosaurus.class, "acrocanthosaurus", 1, PrehistoriCraft.instance, 1024, 1, true, 0x995134, 0x94533A);
         EntityRegistry.registerModEntity(EntityOrnithomimus.class, "ornithomimus", 2, PrehistoriCraft.instance, 1024, 1, true, 0x663300, 0x0073e6);

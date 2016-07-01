@@ -94,7 +94,6 @@ public class BlockLaptop extends BlockContainer {
         if (!keepInventory) {
             TileEntity tileentity = worldIn.getTileEntity(pos);
         }
-
         super.breakBlock(worldIn, pos, state);
     }
 

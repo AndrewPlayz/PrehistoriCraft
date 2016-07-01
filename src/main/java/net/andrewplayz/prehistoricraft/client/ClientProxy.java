@@ -17,6 +17,7 @@ import net.andrewplayz.prehistoricraft.client.renderer.PrehistoricRenderFactory;
 import net.andrewplayz.prehistoricraft.client.renderer.RenderLaptop;
 import net.andrewplayz.prehistoricraft.server.ServerProxy;
 import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
+import net.andrewplayz.prehistoricraft.server.entity.EntityPrehistoric;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityAcrocanthosaurus;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityDaspletosaurus;
 import net.andrewplayz.prehistoricraft.server.entity.hostile.EntityTroodon;
@@ -33,9 +34,6 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 public class ClientProxy extends ServerProxy {
     @Override
     public void onPreInit() {
-        //3D Rendered Blocks
-        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLaptopBlock.class, new RenderLaptop());
-
         //Mobs
         RenderingRegistry.registerEntityRenderingHandler(EntityAcrocanthosaurus.class, new PrehistoricRenderFactory<EntityAcrocanthosaurus>(new AcrocanthosaurusMale(), "acrocanthosaurusmale.png", "acrocanthosaurusfemale.png", 1.0F, 1.0F));
         RenderingRegistry.registerEntityRenderingHandler(EntityOrnithomimus.class, new PrehistoricRenderFactory<EntityOrnithomimus>(new OrnithomimusMale(), "ornithomimusmale.png", "ornithomimusfemale.png", 0.1F, 0.1F));
@@ -54,7 +52,8 @@ public class ClientProxy extends ServerProxy {
 
     @Override
     public void onInit() {
-
+        //3D Rendered Blocks
+        ClientRegistry.bindTileEntitySpecialRenderer(TileEntityLaptopBlock.class, new RenderLaptop());
     }
 
     @Override

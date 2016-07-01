@@ -7,7 +7,7 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.world.World;
 
 public class EntityTroodon extends EntityPrehistoric {
-    public EntityTroodon(World worldIn) {
+    public EntityTroodon(World worldIn, String male) {
         super(worldIn);
         this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(2, new EntityAISwimming(this));

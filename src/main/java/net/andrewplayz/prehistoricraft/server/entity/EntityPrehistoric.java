@@ -34,6 +34,10 @@ public class EntityPrehistoric extends EntityCreature {
         this.getDataManager().set(x, compound.hasKey("Gender") ? compound.getInteger("Gender") : 0);
     }
 
+    public enum EntityGender {
+        MALE, FEMALE
+    }
+
     public EntityGender getGender() {
         return this.getDataManager().get(x) == 0 ? EntityGender.MALE : EntityGender.FEMALE;
     }
