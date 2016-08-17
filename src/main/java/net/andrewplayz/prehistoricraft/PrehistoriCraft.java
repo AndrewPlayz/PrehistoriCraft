@@ -1,5 +1,6 @@
 package net.andrewplayz.prehistoricraft;
 
+import net.andrewplayz.prehistoricraft.client.gui.GUIHandler;
 import net.andrewplayz.prehistoricraft.server.ServerProxy;
 import net.andrewplayz.prehistoricraft.server.core.*;
 import net.andrewplayz.prehistoricraft.server.world.PhCWorldGen;
@@ -8,16 +9,18 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = PrehistoriCraft.MODID, name = "PrehistoriCraft", version = PrehistoriCraft.VERSION, dependencies = "required-after:llibrary@[" + PrehistoriCraft.LLIBRARY_VERSION + ",)")
 public class PrehistoriCraft {
     public static final String MODID = "prehistoricraft";
     public static final String VERSION = "0.2.0";
-    public static final String LLIBRARY_VERSION = "1.3.1";
+    public static final String LLIBRARY_VERSION = "1.4.2";
 
     @Mod.Instance(MODID)
-    public static PrehistoriCraft instance;
+    public static PrehistoriCraft INSTANCE;
+
     @SidedProxy(serverSide = "net.andrewplayz.prehistoricraft.server.ServerProxy", clientSide = "net.andrewplayz.prehistoricraft.client.ClientProxy")
     public static ServerProxy PROXY;
 
@@ -33,8 +36,9 @@ public class PrehistoriCraft {
 
     @Mod.EventHandler
     public void onInit(FMLInitializationEvent event) {
-        GameRegistry.registerWorldGenerator(new PhCWorldGen(), 0);
         PROXY.onInit();
+        GameRegistry.registerWorldGenerator(new PhCWorldGen(), 0);
+        NetworkRegistry.INSTANCE.registerGuiHandler(this, new GUIHandler());
     }
 
     @Mod.EventHandler

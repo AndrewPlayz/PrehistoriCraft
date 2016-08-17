@@ -1,131 +1,70 @@
 package net.andrewplayz.prehistoricraft.server.block.blocks;
 
-import java.util.Random;
-
 import net.andrewplayz.prehistoricraft.PrehistoriCraft;
-import net.andrewplayz.prehistoricraft.server.core.PhCBlocks;
 import net.andrewplayz.prehistoricraft.server.block.tileentity.TileEntityLaptopBlock;
+import net.andrewplayz.prehistoricraft.server.core.PhCBlocks;
 import net.andrewplayz.prehistoricraft.server.core.PhCCreativeTabs;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
-import net.minecraft.inventory.Container;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class BlockLaptop extends BlockContainer {
-    public static final PropertyDirection FACING = BlockHorizontal.FACING;
-    private static boolean keepInventory;
-    private final boolean isActive;
-    private final boolean hasCrashed;
+import javax.annotation.Nullable;
 
-    public BlockLaptop(boolean isActive, boolean hasCrashed, String name) {
+public class BlockLaptop extends BlockContainer {
+
+    public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
+    private static boolean isOnline;
+
+    public BlockLaptop(String name, boolean isOnline) {
         super(Material.IRON);
+        this.setHardness(2.0F);
+        this.setResistance(5.0F);
+        this.isOnline = isOnline;
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        this.isActive = isActive;
-        this.hasCrashed = hasCrashed;
+        this.setSoundType(SoundType.STONE);
         this.setCreativeTab(PhCCreativeTabs.creativetab_prehistoricraft_main);
         this.setUnlocalizedName("prehistoricraft." + name);
         GameRegistry.registerBlock(this, name);
         PrehistoriCraft.PROXY.addItemRender(Item.getItemFromBlock(this), name);
+        GameRegistry.registerTileEntity(TileEntityLaptopBlock.class, name);
     }
 
-    @Override
-    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(Blocks.COBBLESTONE);
-    }
+    public static void setState(boolean online, World worldIn, BlockPos pos)
+    {
+        IBlockState iblockstate = worldIn.getBlockState(pos);
+        TileEntity tileentity = worldIn.getTileEntity(pos);
 
-    @Override
-    public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
-        this.setDefaultFacing(worldIn, pos, state);
-    }
-
-    private void setDefaultFacing(World worldIn, BlockPos pos, IBlockState state) {
-        if (!worldIn.isRemote) {
-            IBlockState iblockstate = worldIn.getBlockState(pos.north());
-            IBlockState iblockstate1 = worldIn.getBlockState(pos.south());
-            IBlockState iblockstate2 = worldIn.getBlockState(pos.west());
-            IBlockState iblockstate3 = worldIn.getBlockState(pos.east());
-            EnumFacing enumfacing = state.getValue(FACING);
-
-            if (enumfacing == EnumFacing.NORTH && iblockstate.isFullBlock() && !iblockstate1.isFullBlock()) {
-                enumfacing = EnumFacing.SOUTH;
-            } else if (enumfacing == EnumFacing.SOUTH && iblockstate1.isFullBlock() && !iblockstate.isFullBlock()) {
-                enumfacing = EnumFacing.NORTH;
-            } else if (enumfacing == EnumFacing.WEST && iblockstate2.isFullBlock() && !iblockstate3.isFullBlock()) {
-                enumfacing = EnumFacing.EAST;
-            } else if (enumfacing == EnumFacing.EAST && iblockstate3.isFullBlock() && !iblockstate2.isFullBlock()) {
-                enumfacing = EnumFacing.WEST;
-            }
-
-            worldIn.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
+        if (online)
+        {
+            worldIn.setBlockState(pos, PhCBlocks.block_laptop_block.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, PhCBlocks.block_laptop_block.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
-    }
-
-    @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileEntityLaptopBlock();
-    }
-
-    @Override
-    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
-        return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing());
-    }
-
-    @Override
-    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing()), 2);
-    }
-
-    @Override
-    public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-        if (!keepInventory) {
-            TileEntity tileentity = worldIn.getTileEntity(pos);
-        }
-        super.breakBlock(worldIn, pos, state);
-    }
-
-    @Override
-    public boolean hasComparatorInputOverride(IBlockState state) {
-        return true;
-    }
-
-    @Override
-    public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos) {
-        return Container.calcRedstone(worldIn.getTileEntity(pos));
-    }
-
-    @Override
-    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
-        return new ItemStack(PhCBlocks.block_laptop_block);
-    }
-
-    @Override
-    public IBlockState getStateFromMeta(int meta) {
-        EnumFacing enumfacing = EnumFacing.getFront(meta);
-
-        if (enumfacing.getAxis() == EnumFacing.Axis.Y) {
-            enumfacing = EnumFacing.NORTH;
+        else
+        {
+            worldIn.setBlockState(pos, PhCBlocks.block_laptop_block.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+            worldIn.setBlockState(pos, PhCBlocks.block_laptop_block.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
         }
 
-        return this.getDefaultState().withProperty(FACING, enumfacing);
-    }
-
-    @Override
-    public int getMetaFromState(IBlockState state) {
-        return state.getValue(FACING).getIndex();
+        if (tileentity != null)
+        {
+            tileentity.validate();
+            worldIn.setTileEntity(pos, tileentity);
+        }
     }
 
     @Override
@@ -134,13 +73,38 @@ public class BlockLaptop extends BlockContainer {
     }
 
     @Override
-    public IBlockState withMirror(IBlockState state, Mirror mirrorIn) {
-        return state.withRotation(mirrorIn.toRotation(state.getValue(FACING)));
+    public boolean canPlaceBlockAt(World worldIn, BlockPos pos) {
+        IBlockState iblockstate = worldIn.getBlockState(pos.down());
+        return iblockstate.getBlock() != Blocks.AIR;
     }
 
     @Override
-    protected BlockStateContainer createBlockState() {
-        return new BlockStateContainer(this, FACING);
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn) {
+        this.checkAndDropBlock(worldIn, pos, worldIn.getBlockState(pos.down()));
+    }
+
+    private boolean checkAndDropBlock(World worldIn, BlockPos pos, IBlockState state) {
+        if (!this.canPlaceBlockAt(worldIn, pos)) {
+            worldIn.destroyBlock(pos, true);
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    @Override
+    public IBlockState onBlockPlaced(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer) {
+        return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing());
+    }
+
+    @Override
+    public IBlockState getStateFromMeta(int meta) {
+        return this.getDefaultState().withProperty(FACING, EnumFacing.getHorizontal(meta));
+    }
+
+    @Override
+    public int getMetaFromState(IBlockState state) {
+        return state.getValue(FACING).getHorizontalIndex();
     }
 
     @Override
@@ -151,5 +115,93 @@ public class BlockLaptop extends BlockContainer {
     @Override
     public boolean isFullCube(IBlockState blockstate) {
         return false;
+    }
+
+    @Override
+    protected BlockStateContainer createBlockState() {
+        return new BlockStateContainer(this, new IProperty[]{FACING});
+    }
+
+    @Override
+    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, ItemStack heldItem, EnumFacing side, float hitX, float hitY, float hitZ) {
+        if (playerIn.isSneaking()) {
+            return false;
+        } else {
+            playerIn.openGui(PrehistoriCraft.INSTANCE, 0, worldIn, pos.getX(), pos.getY(), pos.getZ());
+            return true;
+        }
+    }
+
+    @Override
+    public TileEntity createNewTileEntity(World worldIn, int meta) {
+        return new TileEntityLaptopBlock() {
+            @Override
+            public int getSizeInventory() {
+                return 0;
+            }
+
+            @Nullable
+            @Override
+            public ItemStack getStackInSlot(int index) {
+                return null;
+            }
+
+            @Nullable
+            @Override
+            public ItemStack decrStackSize(int index, int count) {
+                return null;
+            }
+
+            @Nullable
+            @Override
+            public ItemStack removeStackFromSlot(int index) {
+                return null;
+            }
+
+            @Override
+            public void setInventorySlotContents(int index, @Nullable ItemStack stack) {
+
+            }
+
+            @Override
+            public boolean isItemValidForSlot(int index, ItemStack stack) {
+                return false;
+            }
+
+            @Override
+            public int getField(int id) {
+                return 0;
+            }
+
+            @Override
+            public void setField(int id, int value) {
+
+            }
+
+            @Override
+            public int getFieldCount() {
+                return 0;
+            }
+
+            @Override
+            public void clear() {
+
+            }
+
+            @Override
+            public int[] getSlotsForFace(EnumFacing side) {
+                return new int[0];
+            }
+
+            @Override
+            public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction) {
+                return false;
+            }
+
+            @Override
+            public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) {
+                return false;
+            }
+        };
     }
 }

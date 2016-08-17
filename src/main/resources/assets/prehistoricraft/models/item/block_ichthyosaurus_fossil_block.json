@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "prehistoricraft:items/block_ichthyosaurus_fossil_block"
+    }
+}

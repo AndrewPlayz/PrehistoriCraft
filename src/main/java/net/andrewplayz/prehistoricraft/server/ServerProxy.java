@@ -16,5 +16,6 @@ public class ServerProxy {
     }
 
     public void addItemRender(Item item, String name) {
+
     }
 }

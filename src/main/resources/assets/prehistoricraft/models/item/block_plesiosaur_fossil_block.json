@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "prehistoricraft:items/block_plesiosaur_fossil_block"
+    }
+}

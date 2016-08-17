@@ -13,7 +13,7 @@ public class PhCCreativeTabs {
         creativetab_prehistoricraft_main = new CreativeTabs("creativetab_prehistoricraft_main") {
             @SideOnly(Side.CLIENT)
             public Item getTabIconItem() {
-                return PhCItems.item_chronosite_dust;
+                return PhCItems.item_ammonite_shell_fossil;
             }
         };
         creativetab_prehistoricraft_cretaceous = new CreativeTabs("creativetab_prehistoricraft_cretaceous") {

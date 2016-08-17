@@ -1,8 +1,8 @@
 {
   "variants": {
-    "facing=north": { "model": "block_laptop_block" },
-    "facing=south": { "model": "block_laptop_block", "y": 180 },
-    "facing=west":  { "model": "block_laptop_block", "y": 270 },
-    "facing=east":  { "model": "block_laptop_block", "y": 90 }
+    "facing=north": { "model": "prehistoricraft:block_laptop_block"},
+    "facing=south": { "model": "prehistoricraft:block_laptop_block"},
+    "facing=west":  { "model": "prehistoricraft:block_laptop_block"},
+    "facing=east":  { "model": "prehistoricraft:block_laptop_block"}
   }
 }

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "prehistoricraft:block_ichthyosaurus_fossil_block"},
+    "facing=south": { "model": "prehistoricraft:block_ichthyosaurus_fossil_block"},
+    "facing=west":  { "model": "prehistoricraft:block_ichthyosaurus_fossil_block"},
+    "facing=east":  { "model": "prehistoricraft:block_ichthyosaurus_fossil_block"}
+  }
+}

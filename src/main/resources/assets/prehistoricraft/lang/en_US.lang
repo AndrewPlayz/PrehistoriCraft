@@ -6,26 +6,24 @@ tile.prehistoricraft.block_chronosite_block.name=Chronosite Block
 tile.prehistoricraft.block_laptop_block.name=Laptop
 tile.prehistoricraft.block_volcanic_ash_block.name=Volcanic Ash
 tile.prehistoricraft.block_volcanic_rock_block.name=Volcanic Rock
-tile.prehistoricraft.block_volcanic_soil_block.name=Volcanic Soil
+tile.prehistoricraft.block_limestone_cliff_block.name=Limestone Block
+tile.prehistoricraft.block_limestone_tooth_fossil_block.name=Limestone Tooth Fossil
+tile.prehistoricraft.block_limestone_shell_fossil_block.name=Limestone Shell Fossil
 
 PrehistoriCraft Items
 item.prehistoricraft.item_aluminium_ingot.name=Aluminium Ingot
 item.prehistoricraft.item_aluminium_nugget.name=Aluminium Nugget
 item.prehistoricraft.item_chronosite_dust.name=Chronosite Dust
-
-PrehistoriCraft Cloverly Entities
-entity.prehistoricraft.rugocaudia.name=Rugocaudia [CL]
-entity.prehistoricraft.sauroposeidon.name=Sauroposeidon [CL]
-entity.prehistoricraft.sauropelta.name=Sauropelta [CL]
-entity.prehistoricraft.acrocanthosaurus.name=Acrocanthosaurus [CL]
-entity.prehistoricraft.tenontosaurus.name=Tenontosaurus [CL]
-entity.prehistoricraft.ornithomimus.name=Ornithomimus [CL]
+item.prehistoricraft.item_plesiosaurus_tooth_fossil.name=Plesiosaurus Tooth
+item.prehistoricraft.item_mosasaur_tooth_fossil.name=Mosasaur Tooth
+item.prehistoricraft.item_ammonite_shell_fossil.name=Ammonite Shell
 
 PrehistoriCraft Horse Shoe Entities
 entity.prehistoricraft.anodontosaurus.name=Anodontosaurus [HS]
 entity.prehistoricraft.daspletosaurus.name=Daspletosaurus [HS]
 entity.prehistoricraft.edmontonia.name=Edmontonia [HS]
 entity.prehistoricraft.hypacrosaurus.name=Hypacrosaurus [HS]
+entity.prehistoricraft.ornithomimus.name=Ornithomimus [HS]
 entity.prehistoricraft.pachyrhinosauruscanadensis.name=Pachyrhinosaurus Canadensis [HS]
 entity.prehistoricraft.pachyrhinosauruslakustai.name=Pachyrhinosaurus Lakustai [HS]
 entity.prehistoricraft.troodon.name=Troodon [HS]
@@ -33,3 +31,7 @@ entity.prehistoricraft.troodon.name=Troodon [HS]
 PrehistoriCraft CreativeTabs
 itemGroup.creativetab_prehistoricraft_main=PrehistoriCraft OverWorld
 itemGroup.creativetab_prehistoricraft_cretaceous=PrehistoriCraft Cretaceous
+
+PrehistoriCraft Fossils
+tile.prehistoricraft.block_ichthyosaurus_fossil_block.name=Ichythosaurus Fossil
+tile.prehistoricraft.block_plesiosaur_fossil_block.name=Plesiosaurus Fossil
