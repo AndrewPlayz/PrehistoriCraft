@@ -1,5 +1,5 @@
 #################################################
-         ForgeGradle 2.2-SNAPSHOT-0447b4e        
+         ForgeGradle 2.2-SNAPSHOT-fcfdb66        
   https://github.com/MinecraftForge/ForgeGradle  
 #################################################
                Powered by MCP unknown               
@@ -13,7 +13,7 @@
 :extractUserdev UP-TO-DATE
 :extractDependencyATs SKIPPED
 :extractMcpData SKIPPED
-:extractMcpMappings SKIPPED
+:extractMcpMappings
 :genSrgs SKIPPED
 :downloadClient SKIPPED
 :downloadServer SKIPPED
@@ -22,23 +22,24 @@
 :deobfMcSRG SKIPPED
 :decompileMc SKIPPED
 :fixMcSources
-:applySourcePatches SKIPPED
+:applySourcePatches
 :remapMcSources SKIPPED
 :recompileMc SKIPPED
 :extractNatives SKIPPED
 :getAssetIndex UP-TO-DATE
 :getAssets
+Current status: 144/1049   13%
+Current status: 214/1049   20%
+Current status: 311/1049   29%
+Current status: 739/1049   70%
+Current status: 1044/1049   99%
 :makeStart
 :setupDecompWorkspace
 :ideaModule
-Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.4.2-1.9.4/llibrary-1.4.2-1.9.4.pom
-Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.4.2-1.9.4/llibrary-1.4.2-1.9.4-dev.jar
-Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.4.2-1.9.4/llibrary-1.4.2-1.9.4-sources.jar
-Download http://maven.ilexiconn.net/net/ilexiconn/llibrary/1.4.2-1.9.4/llibrary-1.4.2-1.9.4-javadoc.jar
 :ideaProject
 :ideaWorkspace
 :idea
 
 BUILD SUCCESSFUL
 
-Total time: 1 mins 28.031 secs
+Total time: 57.916 secs

@@ -10,7 +10,7 @@ public class EntityAnodontosaurus extends EntityPrehistoric {
     public EntityAnodontosaurus(World worldIn) {
         super(worldIn);
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
+        //this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
     }
 
     protected void applyEntityAttributes() {

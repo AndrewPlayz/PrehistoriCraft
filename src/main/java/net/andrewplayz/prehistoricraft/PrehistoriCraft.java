@@ -16,7 +16,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class PrehistoriCraft {
     public static final String MODID = "prehistoricraft";
     public static final String VERSION = "0.2.0";
-    public static final String LLIBRARY_VERSION = "1.4.2";
+    public static final String LLIBRARY_VERSION = "1.5.1";
 
     @Mod.Instance(MODID)
     public static PrehistoriCraft INSTANCE;

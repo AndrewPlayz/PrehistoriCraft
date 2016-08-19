@@ -419,20 +419,14 @@ public class ModelTroodon extends AdvancedModelBase {
         float globalDegree = 1.0F;
 
         //Idle Animations
-        //Neck
-        walk(Neck1, 0.1F, 0.03F * globalHeight, true, 3.0F, 0.0F, entity.ticksExisted, 1);
-        walk(Neck2, 0.1F, 0.03F * globalHeight, true, 3.0F, 0.0F, entity.ticksExisted, 1);
-
         //Head
         walk(Head1, 0.1F, 0.0F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
         walk(Lowerjaw, 0.1F, 0.0F * globalHeight, true, 0.0F, -0.15F, entity.ticksExisted, 1);
         walk(Jawupper, 0.1F, 0.0F * globalHeight, true, 0.0F, -0.15F, entity.ticksExisted, 1);
 
-        //Tail
-        swing(Tail1, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
-        swing(Tail2, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
-        swing(Tail3, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
-        swing(Tail4, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+        //Neck
+        walk(Neck1, 0.1F, 0.03F * globalHeight, true, 3.0F, 0.0F, entity.ticksExisted, 1);
+        walk(Neck2, 0.1F, 0.03F * globalHeight, true, 3.0F, 0.0F, entity.ticksExisted, 1);
 
         //Left Arm
         walk(ShoulderL, 0.1F, 0.05F * globalHeight, false, 0.5F, 0.0F, entity.ticksExisted, 1);
@@ -452,21 +446,26 @@ public class ModelTroodon extends AdvancedModelBase {
         flap(ArmR, 0.1F, 0.04F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
         flap(HandR, 0.1F, 0.04F * globalHeight, true, 0.5F, 0.0F, entity.ticksExisted, 1);
 
+        //Tail
+        swing(Tail1, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+        swing(Tail2, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+        swing(Tail3, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+        swing(Tail4, 0.05F, 0.2F * globalHeight, true, 0.0F, 0.0F, entity.ticksExisted, 1);
+
 
         //Walking Animations
+        //Head
+        walk(Head1, 0.8F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.0F, limbSwing, limbSwingAmount);
+        walk(Lowerjaw, 0.8F * globalSpeed, 0.0F * globalHeight, true, 0.0F, -0.15F, limbSwing, limbSwingAmount);
+        walk(Jawupper, 0.8F * globalSpeed, 0.0F * globalHeight, true, 0.0F, -0.15F, limbSwing, limbSwingAmount);
+
+        //Neck
+        walk(Neck1, 0.8F * globalSpeed, 0.03F * globalHeight, true, 3.0F, 0.0F, limbSwing, limbSwingAmount);
+        walk(Neck2, 0.8F * globalSpeed, 0.03F * globalHeight, true, 3.0F, 0.0F, limbSwing, limbSwingAmount);
+
         //Body
         bob(Bodyback, 0.8F * globalSpeed, 0.6F * globalHeight, false, limbSwing, limbSwingAmount);
         bob(Bodyfront, 0.8F * globalSpeed, 0.8F * globalHeight, false, limbSwing, limbSwingAmount);
-
-        //Right Leg
-        walk(ThighR, 0.4F * globalSpeed, 0.5F * globalHeight, false, 0.0F, -0.1F, limbSwing, limbSwingAmount);
-        walk(LegR, 0.4F * globalSpeed, 0.5F * globalHeight, false, -1.5F, 0.2F, limbSwing, limbSwingAmount);
-        walk(SoleR, 0.4F * globalSpeed, 0.5F * globalHeight, false, -4.0F, -0.05F, limbSwing, limbSwingAmount);
-
-        //Left Leg
-        walk(ThighL, 0.4F * globalSpeed, 0.5F * globalHeight, true, 0.0F, 0.1F, limbSwing, limbSwingAmount);
-        walk(LegL, 0.4F * globalSpeed, 0.5F * globalHeight, true, -1.5F, -0.2F, limbSwing, limbSwingAmount);
-        walk(SoleL, 0.4F * globalSpeed, 0.5F * globalHeight, true, -4.0F, 0.05F, limbSwing, limbSwingAmount);
 
         //Left Arm
         walk(ShoulderL, 0.4F * globalSpeed, 0.1F * globalHeight, false, 0.5F, 0.0F, limbSwing, limbSwingAmount);
@@ -486,14 +485,15 @@ public class ModelTroodon extends AdvancedModelBase {
         flap(ArmR, 0.4F * globalSpeed, 0.08F * globalHeight, true, 0.5F, 0.0F, limbSwing, limbSwingAmount);
         flap(HandR, 0.4F * globalSpeed, 0.08F * globalHeight, true, 0.5F, 0.0F, limbSwing, limbSwingAmount);
 
-        //Neck
-        walk(Neck1, 0.8F * globalSpeed, 0.03F * globalHeight, true, 3.0F, 0.0F, limbSwing, limbSwingAmount);
-        walk(Neck2, 0.8F * globalSpeed, 0.03F * globalHeight, true, 3.0F, 0.0F, limbSwing, limbSwingAmount);
+        //Left Leg
+        walk(ThighL, 0.4F * globalSpeed, 0.5F * globalHeight, true, 0.0F, 0.1F, limbSwing, limbSwingAmount);
+        walk(LegL, 0.4F * globalSpeed, 0.5F * globalHeight, true, -1.5F, -0.2F, limbSwing, limbSwingAmount);
+        walk(SoleL, 0.4F * globalSpeed, 0.5F * globalHeight, true, -4.0F, 0.05F, limbSwing, limbSwingAmount);
 
-        //Head
-        walk(Head1, 0.8F * globalSpeed, 0.0F * globalHeight, true, 0.0F, 0.0F, limbSwing, limbSwingAmount);
-        walk(Lowerjaw, 0.8F * globalSpeed, 0.0F * globalHeight, true, 0.0F, -0.15F, limbSwing, limbSwingAmount);
-        walk(Jawupper, 0.8F * globalSpeed, 0.0F * globalHeight, true, 0.0F, -0.15F, limbSwing, limbSwingAmount);
+        //Right Leg
+        walk(ThighR, 0.4F * globalSpeed, 0.5F * globalHeight, false, 0.0F, -0.1F, limbSwing, limbSwingAmount);
+        walk(LegR, 0.4F * globalSpeed, 0.5F * globalHeight, false, -1.5F, 0.2F, limbSwing, limbSwingAmount);
+        walk(SoleR, 0.4F * globalSpeed, 0.5F * globalHeight, false, -4.0F, -0.05F, limbSwing, limbSwingAmount);
 
         //Tail
         swing(Tail1, 0.2F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
