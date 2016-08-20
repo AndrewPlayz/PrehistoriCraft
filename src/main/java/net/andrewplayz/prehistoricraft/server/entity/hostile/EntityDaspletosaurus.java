@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 public class EntityDaspletosaurus extends EntityPrehistoric {
     public EntityDaspletosaurus(World worldIn) {
         super(worldIn);
-        //this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
+        this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
         this.tasks.addTask(2, new EntityAISwimming(this));
     }
 
@@ -17,6 +17,7 @@ public class EntityDaspletosaurus extends EntityPrehistoric {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(60.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.226D);
+        this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(100.0F);
     }
 
     @Override

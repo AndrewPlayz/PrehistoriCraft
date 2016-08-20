@@ -485,10 +485,10 @@ public class ModelOrnithomimus extends AdvancedModelBase {
         walk(Lfoot, 0.4F * globalSpeed, 0.5F * globalHeight, true, -4.0F, 0.1F, limbSwing, limbSwingAmount);
 
         //Tail
-        swing(Tail1, 0.1F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
-        swing(Tail2, 0.1F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
-        swing(Tail3, 0.1F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
-        swing(Tail4, 0.1F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
-        swing(Tail5, 0.1F * globalSpeed, 0.25F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
+        swing(Tail1, 0.1F * globalSpeed, 0.1F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
+        swing(Tail2, 0.1F * globalSpeed, 0.2F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
+        swing(Tail3, 0.1F * globalSpeed, 0.3F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
+        swing(Tail4, 0.1F * globalSpeed, 0.4F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
+        swing(Tail5, 0.1F * globalSpeed, 0.5F * globalHeight, true, 0, 0.0F, limbSwing, limbSwingAmount);
     }
 }

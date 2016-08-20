@@ -15,8 +15,8 @@ public class PhCEntities{
         EntityRegistry.registerModEntity(EntityDaspletosaurus.class, "daspletosaurus", 3, PrehistoriCraft.INSTANCE, 1024, 1, true, 0x2F2536, 0xD49753);
         EntityRegistry.registerModEntity(EntityEdmontonia.class, "edmontonia", 4, PrehistoriCraft.INSTANCE, 1024, 1, true, 0xDB6023, 0x8C807A);
         EntityRegistry.registerModEntity(EntityHypacrosaurus.class, "hypacrosaurus", 5, PrehistoriCraft.INSTANCE, 1024, 1, true, 0xDBDBDB, 0x3D3D3D);
-        EntityRegistry.registerModEntity(EntityPachyrhinosaurusCanadensis.class, "pachyrhinosauruscanadensis", 6, PrehistoriCraft.INSTANCE, 1024, 1, true, 0xB56B21, 0x872518);
-        EntityRegistry.registerModEntity(EntityPachyrhinosaurusLakustai.class, "pachyrhinosauruslakustai", 7, PrehistoriCraft.INSTANCE, 1024, 1, true, 0x96602A, 0x872518);
+        EntityRegistry.registerModEntity(EntityPachyrhinosaurusCanadensis.class, "pachyrhinosauruscanadensis", 6, PrehistoriCraft.INSTANCE, 1024, 1, true, 0x331a00, 0xC2C4C4);
+        EntityRegistry.registerModEntity(EntityPachyrhinosaurusLakustai.class, "pachyrhinosauruslakustai", 7, PrehistoriCraft.INSTANCE, 1024, 1, true, 0x1a0d00, 0xC2C4C4);
         EntityRegistry.registerModEntity(EntityTroodon.class, "troodon", 8, PrehistoriCraft.INSTANCE, 1024, 1, true, 0x4D4D61, 0xE3E3E3);
     }
 }

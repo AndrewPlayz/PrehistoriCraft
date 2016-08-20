@@ -17,5 +17,11 @@ public class EntityHypacrosaurus extends EntityPrehistoric {
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(40.0D);
         this.getEntityAttribute(SharedMonsterAttributes.MOVEMENT_SPEED).setBaseValue(0.226D);
+        this.getEntityAttribute(SharedMonsterAttributes.KNOCKBACK_RESISTANCE).setBaseValue(100.0F);
+    }
+
+    @Override
+    public boolean canDespawn() {
+        return false;
     }
 }

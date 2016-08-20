@@ -2,6 +2,7 @@ package net.andrewplayz.prehistoricraft.client.renderer;
 
 import net.andrewplayz.prehistoricraft.PrehistoriCraft;
 import net.andrewplayz.prehistoricraft.server.entity.EntityPrehistoric;
+import net.ilexiconn.llibrary.client.model.tools.AdvancedModelBase;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.entity.RenderLiving;
